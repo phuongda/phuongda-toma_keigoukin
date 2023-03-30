@@ -4,10 +4,40 @@
 
 .l-blocks
 
+    &.l-top-1
+
+        .c-cols.col-55
+
+            .content
+
+                .u-wrap
+
+                    &.p-ani-fadeIn
+
+                        &::before
+                            animation: wrap-to-right 2s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+                    &.p-ani-fadeInUp
+
+                        &::before
+                            animation: wrap-to-right 2s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
     &.l-top-2
 
         .bg
             bottom: -36px
+
+    &.l-top-4
+
+        .c-products
+
+            .item
+
+                .c-title
+                    transition: var(--transition-default)
+
+                &:hover .c-title
+                    color: var(--color-main)
 
     &.l-top-5
 

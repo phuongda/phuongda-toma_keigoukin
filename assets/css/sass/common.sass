@@ -1,35 +1,12 @@
 @import "core/mixin/_mixin"
 @import "core/variable/_color", "core/variable/_fonts"
 
-:root
-    --font-yu: #{$font-yu}
-    --font-mei: #{$font-mei}
-    --font-ar: #{$font-ar}
-    --font-am: #{$font-am}
-    --font-gr: #{$font-gr}
-    --font-default: #{$font-yu}
-    --font-weight-default: #{$font-weight-default}
-    --color-default: #{$color-text}
-    --color-main: #{$color-blue}
-    --color-white: white
-    --color-black: #{$color-text}
-    --color-gray: #{$color-gray}
-    --color-gray2: #{$color-gray2}
-    --color-gray3: #{$color-gray3}
-    --color-gray4: #{$color-gray4}
-    --color-green: #{$color-green}
-    --color-blue: #{$color-blue}
-    --color-red: #{$color-red}
-    --color-orange: #{$color-orange}
-    --color-yellow: #{$color-yellow}
-    --transition-default: 0.5s
-
 .c-header
     background: var(--color-main)
     color: white
 
     &__slogan
-        margin-left: 22px
+        margin-left: 30px
 
         p
             font-size: 1.6rem
@@ -112,6 +89,27 @@
             max-width: 1220px
             clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%)
             z-index: 1
+
+            .parallax
+                max-width: 64%
+                left: unset
+                right: 0
+
+.c-news
+
+    &.have-image
+
+        .item
+            transition: var(--transition-default)
+
+            .c-date
+                transition: var(--transition-default)
+
+            &:hover
+                color: var(--color-main) !important
+
+                .c-date
+                    color: var(--color-main) !important
 
 .c-products
 
@@ -225,20 +223,52 @@ main:not(.p-top)
         h3
             margin-bottom: 60px
 
-@media only screen and (max-width: 1660px)
+.u-wrap
+    display: inline-block
+    position: relative
+    overflow: hidden
+
+    &::before
+        /* animation: wrap-to-right 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; */
+        background: #fff
+        bottom: 0
+        content: ""
+        left: 0
+        pointer-events: none
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 1
+
+@keyframes wrap-to-left
+    100%
+        transform: translateX(-100%)
+
+@keyframes wrap-to-right
+    100%
+        transform: translateX(100%)
+
+@media only screen and (min-width: 1921px)
+    main:not(.p-top) .l-block.l-bg .img
+        height: auto !important
+        width: 100%
+
+@media only screen and (max-width: 1680px)
     .c-header
 
         &__slogan
+            margin-left: 20px
 
             p
                 font-size: 1.3rem
 
+        &__menu
+            padding-right: 10px
+            margin-right: 0
+            a
+                font-size: 1.3rem
+
 @media only screen and (max-width: 1536px)
-    .c-header
-
-        &__slogan
-            display: none
-
     .c-banner
 
         &.banner-custom
@@ -246,6 +276,29 @@ main:not(.p-top)
 
             .contents
                 left: 40px
+
+@media only screen and (min-width: 1441px)
+    .c-products
+
+        &.product-box2
+
+            .item
+                padding: 50px 70px 10px 70px
+
+@media only screen and (max-width: 1440px)
+    .c-header
+
+        &__slogan
+
+            p
+                font-size: 1.1rem
+
+        &__menu
+
+            li
+                min-width: auto
+                padding-left: 10px
+                padding-right: 10px
 
 @media screen and (min-width: 992px)
     .c-tabs-list

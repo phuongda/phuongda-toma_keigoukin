@@ -927,8 +927,9 @@
                     --hover-background: var(--color-red)
 
                 &.button-white
-                    --border-color: var(--color-main)
-                    --hover-background: var(--color-main)
+                    --border-color: white
+                    --hover-background: white
+                    color: var(--color-main)
 
     &.button-opacity
 
@@ -1066,6 +1067,18 @@
 
             .c-icon
                 animation: arrow_hover 1s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite
+
+    &.change-color
+
+        &:hover
+            color: var(--color-main)
+
+            .c-icon
+
+                &.ic
+
+                    &-arrowlong-right-black
+                        background-image: url("../img/common/ic-arrowlong-right-blue.svg")
 
 @keyframes arrow_hover
     0%
@@ -1999,7 +2012,6 @@
             font-size: 1.4rem
             position: relative
             color: var(--color-default)
-            // transition: var(--transition-default)
             transition: 0.2s
 
             span
@@ -2442,18 +2454,19 @@
             &:hover
                 opacity: 0.5
 
-                &+ul
-                    display: flex
+                // &+ul
+                //     display: flex
 
         ul
-            @include box-100()
+            width: 100%
+            // @include box-100()
             display: none
             padding: 20px 0 0 0
             transition: var(--transition-default)
 
             li
                 padding: 10px 10px 10px 40px
-                font-size: 2rem
+                font-size: 1.6rem
 
                 a
                     padding-left: 0
@@ -2461,8 +2474,8 @@
                     &::after
                         display: none
 
-            &:hover
-                display: block
+            // &:hover
+            //     display: flex
 
     &.is-show
         visibility: visible
@@ -3696,7 +3709,7 @@
     &__bottom
         @include box-100()
         justify-content: flex-end
-        padding-top: 60px
+        padding-top: 40px
 
         .c-copyright
             margin-bottom: 0
@@ -3888,6 +3901,7 @@
                     margin-right: 30px
 
     &__menu
+        min-width: 175px
         @include box()
         flex-direction: column
 
@@ -3909,9 +3923,30 @@
                 margin-bottom: 20px
 
             a
+                height: 100%
+                display: block
                 font-size: 1.8rem
                 font-weight: bold
                 line-height: 1.8
+                transition: var(--transition-default)
+
+            ul
+                width: 100%
+                display: none
+                padding: 20px 0 0 0
+                transition: var(--transition-default)
+
+                li
+                    padding-left: 0
+
+                    &:not(:last-child)
+                        margin-bottom: 10px
+
+                    &::before
+                        display: none
+
+                    a
+                        font-size: 1.6rem
 
     &.copyright-bg
         padding-bottom: 0
@@ -3959,11 +3994,11 @@
         &::before
             content: ""
             width: 2px
-            height: 16vw
-            max-height: 300px
+            height: 100%
+            max-height: 310px
             background: white
             position: absolute
-            top: 0.5vw
+            top: 5px
             left: 0
 
         h2
@@ -4009,17 +4044,16 @@
 
     .swiper
         width: 100%
-        max-width: 1620px
-        padding-right: 100px
-        position: absolute
-        top: 0
-        right: 0
-        bottom: 0
-        overflow: unset
+        // max-width: 1620px
+        height: 100%
+        // position: absolute
+        // top: 0
+        // right: 0
+        // bottom: 0
+        // overflow: unset
 
         &-container
-            @include box-100()
-            height: 100%
+            @include box-full()
             padding: 0
             overflow: hidden
 
@@ -4035,6 +4069,7 @@
                 z-index: 2
 
         .image-container
+            width: 100%
             height: 100%
             background-position: center
             background-repeat: no-repeat
@@ -4199,7 +4234,6 @@
             width: calc(100% - 120px)
 
         .swiper
-            padding-right: 120px
 
             .swiper-pagination
                 width: 120px
@@ -4230,8 +4264,8 @@
             span
                 font-size: 1.2rem
 
-        &__slogan
-            display: none
+        // &__slogan
+        //     display: none
 
         &__menu
 
@@ -4252,7 +4286,8 @@
 
         .menu-child
             width: calc(100% - 100px)
-            padding-left: 100px
+            // padding-left: 100px
+            padding-left: 0
             top: 100px
 
     .c-mainvisual
@@ -4262,9 +4297,8 @@
             left: 50px
 
             &::before
-                height: 18vw
-                max-height: 220px
-                top: 0.2vw
+                max-height: 210px
+                top: 5px
 
             h2
                 font-size: 9.6rem
@@ -4443,6 +4477,9 @@
         &__action
             display: none
 
+        &__slogan
+            display: none
+
         .menu-child
             width: 100%
             padding-left: 0
@@ -4458,9 +4495,8 @@
         &__cnt
 
             &::before
-                height: 15vw
-                max-height: 220px
-                top: 0.5vw
+                max-height: 190px
+                top: 5px
 
             h2
                 font-size: 8.6rem

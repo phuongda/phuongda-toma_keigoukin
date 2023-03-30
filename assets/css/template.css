@@ -1007,8 +1007,9 @@
   --hover-background: var(--color-red);
 }
 .c-button.button-outline:not(.button-opacity):hover.button-white {
-  --border-color: var(--color-main);
-  --hover-background: var(--color-main);
+  --border-color: white;
+  --hover-background: white;
+  color: var(--color-main);
 }
 .c-button.button-opacity:hover {
   opacity: 0.5;
@@ -1131,6 +1132,12 @@
 }
 .c-showmore:not(.opacity):hover.showmore-animation .c-icon {
   animation: arrow_hover 1s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite;
+}
+.c-showmore.change-color:hover {
+  color: var(--color-main);
+}
+.c-showmore.change-color:hover .c-icon.ic-arrowlong-right-black {
+  background-image: url("../img/common/ic-arrowlong-right-blue.svg");
 }
 
 @keyframes arrow_hover {
@@ -2413,29 +2420,21 @@
 .c-menu li a:hover {
   opacity: 0.5;
 }
-.c-menu li a:hover + ul {
-  display: flex;
-}
 .c-menu li ul {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   display: none;
   padding: 20px 0 0 0;
   transition: var(--transition-default);
 }
 .c-menu li ul li {
   padding: 10px 10px 10px 40px;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .c-menu li ul li a {
   padding-left: 0;
 }
 .c-menu li ul li a::after {
   display: none;
-}
-.c-menu li ul:hover {
-  display: block;
 }
 .c-menu.is-show {
   visibility: visible;
@@ -3676,7 +3675,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 .c-footer__bottom .c-copyright {
   margin-bottom: 0;
@@ -3875,6 +3874,7 @@
   margin-right: 30px;
 }
 .c-footer__menu {
+  min-width: 175px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -3896,9 +3896,30 @@
   margin-bottom: 20px;
 }
 .c-footer__menu li a {
+  height: 100%;
+  display: block;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.8;
+  transition: var(--transition-default);
+}
+.c-footer__menu li ul {
+  width: 100%;
+  display: none;
+  padding: 20px 0 0 0;
+  transition: var(--transition-default);
+}
+.c-footer__menu li ul li {
+  padding-left: 0;
+}
+.c-footer__menu li ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.c-footer__menu li ul li::before {
+  display: none;
+}
+.c-footer__menu li ul li a {
+  font-size: 1.6rem;
 }
 .c-footer.copyright-bg {
   padding-bottom: 0;
@@ -3947,11 +3968,11 @@
 .c-mainvisual__cnt::before {
   content: "";
   width: 2px;
-  height: 16vw;
-  max-height: 300px;
+  height: 100%;
+  max-height: 310px;
   background: white;
   position: absolute;
-  top: 0.5vw;
+  top: 5px;
   left: 0;
 }
 .c-mainvisual__cnt h2 {
@@ -4001,19 +4022,13 @@
 }
 .c-mainvisual .swiper {
   width: 100%;
-  max-width: 1620px;
-  padding-right: 100px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  overflow: unset;
+  height: 100%;
 }
 .c-mainvisual .swiper-container {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   padding: 0;
   overflow: hidden;
 }
@@ -4028,6 +4043,7 @@
   z-index: 2;
 }
 .c-mainvisual .swiper .image-container {
+  width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -4186,9 +4202,6 @@
   .c-mainvisual__bg {
     width: calc(100% - 120px);
   }
-  .c-mainvisual .swiper {
-    padding-right: 120px;
-  }
   .c-mainvisual .swiper .swiper-pagination {
     width: 120px;
   }
@@ -4217,9 +4230,6 @@
   .c-header__logo span {
     font-size: 1.2rem;
   }
-  .c-header__slogan {
-    display: none;
-  }
   .c-header__menu.menu-lg a {
     font-size: 1.3rem;
   }
@@ -4233,7 +4243,7 @@
   }
   .c-header .menu-child {
     width: calc(100% - 100px);
-    padding-left: 100px;
+    padding-left: 0;
     top: 100px;
   }
   .c-mainvisual {
@@ -4243,9 +4253,8 @@
     left: 50px;
   }
   .c-mainvisual__cnt::before {
-    height: 18vw;
-    max-height: 220px;
-    top: 0.2vw;
+    max-height: 210px;
+    top: 5px;
   }
   .c-mainvisual__cnt h2 {
     font-size: 9.6rem;
@@ -4369,6 +4378,9 @@
   .c-header__action {
     display: none;
   }
+  .c-header__slogan {
+    display: none;
+  }
   .c-header .menu-child {
     width: 100%;
     padding-left: 0;
@@ -4380,9 +4392,8 @@
     width: 100%;
   }
   .c-mainvisual__cnt::before {
-    height: 15vw;
-    max-height: 220px;
-    top: 0.5vw;
+    max-height: 190px;
+    top: 5px;
   }
   .c-mainvisual__cnt h2 {
     font-size: 8.6rem;
