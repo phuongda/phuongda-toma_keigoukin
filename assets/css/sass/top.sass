@@ -1,0 +1,46 @@
+/* top page */
+@import "core/mixin/_mixin"
+@import "core/variable/_color"
+
+.l-blocks
+
+    &.l-top-2
+
+        .bg
+            bottom: -36px
+
+    &.l-top-5
+
+        .c-cols
+
+            &.col-55
+
+                .thumb
+
+                    img
+                        max-width: 645px
+
+                .content
+
+                    img
+                        max-width: 630px
+
+@media only screen and (min-width: 992px)
+    .l-blocks
+
+        &.l-top-1
+
+            .c-cols
+
+                &.col-55
+
+                    .thumb
+                        width: 51%
+                        max-width: 712px
+
+                        img
+                            max-width: 640px
+
+                    .content
+                        width: 45%
+                        max-width: 627px
