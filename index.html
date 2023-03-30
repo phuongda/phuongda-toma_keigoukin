@@ -31,7 +31,7 @@
         <div class="c-header__action">
             <ul class="c-header__menu border-menu">
                 <li>
-                    <a href="service.html"><strong>製品紹介</strong></a>
+                    <a href="javascript:void(0)"><strong>製品紹介</strong></a>
                     <div class="menu-child">
                         <div class="l-container pt70 pb50">
                             <div class="c-menu-child">
@@ -81,7 +81,7 @@
     <div class="c-menu">
         <ul>
             <li>
-                <a href="service.html"><strong>製品紹介</strong></a>
+                <a href="javascript:void(0)"><strong>製品紹介</strong></a>
                 <ul>
                     <li>
                         <a href="service_1.html">低圧（LP）鋳造</a>
@@ -114,7 +114,19 @@
                 <span class="c-mainvisual__subtitle pl5">知恵と技で磨かれた職人魂が生み出す製品づくり</span>
             </div>
             <div class="c-mainvisual__bg">
-                <img class="lazy" data-src="./assets/img/top/mainvisual.jpg">
+                <!-- <img class="lazy" data-src="./assets/img/top/mainvisual.jpg"> -->
+                <div class="swiper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="image-container lazy" data-bg="./assets/img/top/mainvisual.jpg"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-container lazy" data-bg="./assets/img/top/mainvisual.jpg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="c-action">
                 <a href="javascript:voil(0)" class="wfull">
@@ -124,17 +136,17 @@
                 <a href="javascript:voil(0)">
                     <i class="c-icon icon-lg ic-instagram"></i>
                 </a>
-                <a class="l-sclore" href="#footer">
+                <div class="l-sclore" href="#footer">
                     <div class="c-sclore">
                         <div><span></span></div>
                         <p>SCROLL</p>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
         <section class="l-block l-news l-bg">
             <div class="l-container-full pt110 pt90tb pt70sp pt50xs pb100 pb70tb pb50sp">
-                <div class="c-bl-news p-fadein p-delay_1s">
+                <div class="c-bl-news p-fadeinup p-delay_1s">
                     <div class="c-bl-news__title mb50 mb30sp">
                         <div class="l-container">
                             <div class="c-bl-news__left">
@@ -256,7 +268,7 @@
                             <div class="l-container">
                                 <div class="c-gr-button justify-content-end mt40 mt30sp">
                                     <a class="c-showmore icon-right opacity" href="news.html">
-                                        <strong>ブログ一覧を見る</strong>
+                                        <strong>お知らせ一覧を見る</strong>
                                         <i class="c-icon ic-arrowlong-right-black"></i>
                                     </a>
                                 </div>
@@ -275,7 +287,7 @@
                         <span class="c-subtitle text24 text18tb text14sp clblack mt15 mt10sp">プロモーション動画</span>
                     </h3>
                 </div>
-                <div class="l-block__main p-fadein p-delay_1s">
+                <div class="l-block__main p-fadeinup p-delay_1s">
                     <div
                         class="l-video l-container-1080 mb110 mb90tb mb70sp mb50xs px90 px50tb px40sp px20xs py50 py30tb py20sp py10xs bgwhite">
                         <img src="./assets/img/top/video-img.jpg">
@@ -292,7 +304,8 @@
                             <h3 class="c-title text48 text38tb text28sp">
                                 <strong>
                                     <span class="px10 px5sp">難しいことこそ、</span><br>
-                                    <span><b class="bgblue clwhite px10 px5sp">"最もやりたい"</b></span>と思うこと</span>
+                                    <span class="d-flex"><b
+                                            class="bgblue clwhite px10 px5sp u-wrap p-fadeinup">"最もやりたい"</b>と思うこと</span>
                                 </strong>
                             </h3>
                             <div class="c-description mt55 mt35tb px10">
@@ -338,7 +351,7 @@
                     <div class="c-products col2 space60 product-box2 scale-img c-counters counter-zero">
                         <div class="item mb10 mb0tb p-fadeinup p-delay_1s">
                             <div class="contents">
-                                <figure class="c-figure height500">
+                                <figure class="c-figure height450 mb25">
                                     <img class="lazy" data-src="./assets/img/top/img-16.jpg">
                                     <span class="sticker-counter counter"></span>
                                 </figure>
@@ -354,16 +367,16 @@
                                         </p>
                                     </div>
                                 </div>
-                                <a class="c-button button-blue button-outline button-md button-radius button-maxwidth button-maxwidth-400 mxauto mb30 mb10tb"
-                                    href="service_1.html">
-                                    <i class="c-icon ic-cursor-blue"></i>
-                                    <strong class="text18 text15tb text13sp">詳細を見る</strong>
-                                </a>
                             </div>
+                            <a class="c-button button-blue button-outline button-md button-radius button-maxwidth button-maxwidth-400 mxauto mb30 mb10tb"
+                                href="service_1.html">
+                                <i class="c-icon ic-cursor-blue"></i>
+                                <strong class="text18 text15tb text13sp">詳細を見る</strong>
+                            </a>
                         </div>
                         <div class="item mb10 mb0tb p-fadeinup p-delay_3s">
                             <div class="contents">
-                                <figure class="c-figure height500">
+                                <figure class="c-figure height450 mb25">
                                     <img class="lazy" data-src="./assets/img/top/img-17.jpg">
                                     <span class="sticker-counter counter"></span>
                                 </figure>
@@ -378,16 +391,16 @@
                                         </p>
                                     </div>
                                 </div>
-                                <a class="c-button button-blue button-outline button-md button-radius button-maxwidth button-maxwidth-400 mxauto mb30 mb10tb"
-                                    href="service_2.html">
-                                    <i class="c-icon ic-cursor-blue"></i>
-                                    <strong class="text18 text15tb text13sp">詳細を見る</strong>
-                                </a>
                             </div>
+                            <a class="c-button button-blue button-outline button-md button-radius button-maxwidth button-maxwidth-400 mxauto mb30 mb10tb"
+                                href="service_2.html">
+                                <i class="c-icon ic-cursor-blue"></i>
+                                <strong class="text18 text15tb text13sp">詳細を見る</strong>
+                            </a>
                         </div>
                         <div class="item mb10 mb0tb p-fadeinup p-delay_1s">
                             <div class="contents">
-                                <figure class="c-figure height500">
+                                <figure class="c-figure height450 mb25">
                                     <img class="lazy" data-src="./assets/img/top/img-18.jpg">
                                     <span class="sticker-counter counter"></span>
                                 </figure>
@@ -411,7 +424,7 @@
                         </div>
                         <div class="item mb10 mb0tb p-fadeinup p-delay_3s">
                             <div class="contents">
-                                <figure class="c-figure height500">
+                                <figure class="c-figure height450 mb25">
                                     <img class="lazy" data-src="./assets/img/top/img-19.jpg">
                                     <span class="sticker-counter counter"></span>
                                 </figure>
@@ -436,27 +449,24 @@
                     </div>
                 </div>
             </div>
-            <img class="bg img-cover img-bottom lazy" data-src="assets/img/top/bg-02.jpg">
+            <img class="bg img-cover img-bottom lazy" src="assets/img/top/bg-02.jpg">
         </section>
         <section class="l-blocks l-top-3">
             <div class="l-container-full">
                 <div class="c-banner box-content banner-custom bg-img bg-cover lazy" data-bg="./assets/img/top/bg.jpg">
                     <div class="contents bg-contents">
-                        <span class="c-subtitle text32 text22tb counter counter-right">Contents</span>
+                        <span class="c-subtitle text15 text13tb counter counter-right">Contents</span>
                         <h3 class="c-title text82 text52tb text42sp text32xs clblue">
                             <strong>Quality control</strong>
                         </h3>
                         <h4 class="text24 text18tb text16sp"><strong>品質管理体制</strong></h4>
                         <div class="c-description mt50 mt30tb">
-                            <p class="text18 text15tb text13sp">少数精鋭のプロ集団がすみずみまで<br>行き届いた厳密な品質管理体制を徹底致します</p>
+                            <p class="text18 text15tb text13sp">少数精鋭のプロ集団がすみずみまで<br>行き届いた厳密な品質管理体制を徹底致します。</p>
                         </div>
                     </div>
                     <div class="banner">
                         <div class="parallax-box position-relative">
-                            <div class="parallax__container">
-                                <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-1.jpg">
-                                </div>
-                            </div>
+                            <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-1.jpg"></div>
                         </div>
                     </div>
                 </div>
@@ -480,7 +490,8 @@
                                                 ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
                                         </div>
                                     </div>
-                                    <a class="c-showmore icon-right mt35 ml20 ml10tb" href="insistence.html">
+                                    <a class="c-showmore icon-right change-color mt35 ml20 ml10tb"
+                                        href="insistence.html">
                                         <strong>詳細を見る</strong>
                                         <i class="c-icon ic-arrowlong-right-black ml25 ml15tb"></i>
                                     </a>
@@ -501,7 +512,8 @@
                                                 ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
                                         </div>
                                     </div>
-                                    <a class="c-showmore icon-right mt35 ml20 ml10tb" href="insistence.html">
+                                    <a class="c-showmore icon-right change-color mt35 ml20 ml10tb"
+                                        href="insistence.html">
                                         <strong>詳細を見る</strong>
                                         <i class="c-icon ic-arrowlong-right-black ml25 ml15tb"></i>
                                     </a>
@@ -522,7 +534,8 @@
                                                 デザイン、数量からお聞かせ下さい。<br>ネームプレート、サインパネル、式典、記念パネル、モニュメントなど製品をご提供致します。</p>
                                         </div>
                                     </div>
-                                    <a class="c-showmore icon-right mt35 ml20 ml10tb" href="insistence.html">
+                                    <a class="c-showmore icon-right change-color mt35 ml20 ml10tb"
+                                        href="insistence.html">
                                         <strong>詳細を見る</strong>
                                         <i class="c-icon ic-arrowlong-right-black ml25 ml15tb"></i>
                                     </a>
@@ -544,7 +557,7 @@
             <div class="l-container-full">
                 <div class="c-banner box-content banner-custom bg-img bg-cover lazy" data-bg="./assets/img/top/bg.jpg">
                     <div class="contents bg-contents">
-                        <span class="c-subtitle text32 text22tb counter counter-right">Contents</span>
+                        <span class="c-subtitle text15 text13tb counter counter-right">Contents</span>
                         <h3 class="c-title text82 text52tb text42sp text32xs clblue">
                             <strong>Faclities</strong>
                         </h3>
@@ -555,9 +568,7 @@
                     </div>
                     <div class="banner">
                         <div class="parallax-box position-relative">
-                            <div class="parallax__container">
-                                <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-2.jpg">
-                                </div>
+                            <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-2.jpg">
                             </div>
                         </div>
                     </div>
@@ -661,7 +672,7 @@
             <div class="l-container-full">
                 <div class="c-banner box-content banner-custom bg-img bg-cover lazy" data-bg="./assets/img/top/bg.jpg">
                     <div class="contents bg-contents">
-                        <span class="c-subtitle text32 text22tb counter counter-right">Contents</span>
+                        <span class="c-subtitle text15 text13tb counter counter-right">Contents</span>
                         <h3 class="c-title text82 text52tb text42sp text32xs clblue">
                             <strong>Profile</strong>
                         </h3>
@@ -672,9 +683,7 @@
                     </div>
                     <div class="banner">
                         <div class="parallax-box position-relative">
-                            <div class="parallax__container">
-                                <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-3.jpg">
-                                </div>
+                            <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-3.jpg">
                             </div>
                         </div>
                     </div>
@@ -734,7 +743,7 @@
             <div class="l-container-full">
                 <div class="c-banner box-content banner-custom bg-img bg-cover lazy" data-bg="./assets/img/top/bg.jpg">
                     <div class="contents bg-contents">
-                        <span class="c-subtitle text32 text22tb counter counter-right">Contents</span>
+                        <span class="c-subtitle text15 text13tb counter counter-right">Contents</span>
                         <h3 class="c-title text82 text52tb text42sp text32xs clblue">
                             <strong>Recruit</strong>
                         </h3>
@@ -745,9 +754,7 @@
                     </div>
                     <div class="banner">
                         <div class="parallax-box position-relative">
-                            <div class="parallax__container">
-                                <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-4.jpg">
-                                </div>
+                            <div class="parallax parallax-bg lazy" data-bg="./assets/img/top/bg-4.jpg">
                             </div>
                         </div>
                     </div>
@@ -1001,21 +1008,38 @@
             </div>
             <div class="c-footer__right">
                 <ul class="c-footer__menu">
-                    <li> <a href="index.html"><strong>ホーム</strong></a></li>
-                    <li> <a href="service.html"><strong>製品紹介</strong></a></li>
-                    <li> <a href="insistence.html"><strong>こだわり</strong></a></li>
-                    <li> <a href="machine.html"><strong>設備紹介</strong></a></li>
-                    <li> <a href="profile.html"><strong>会社案内</strong></a></li>
-                    <li> <a href="recruit.html"><strong>採用案内</strong></a></li>
-                    <li> <a href="contact.html"><strong>お問合せ</strong></a></li>
+                    <li><a href="index.html"><strong>ホーム</strong></a></li>
+                    <li>
+                        <a href="javascript:void(0)"><strong>製品紹介</strong></a>
+                        <ul>
+                            <li>
+                                <a href="service_1.html">低圧（LP）鋳造</a>
+                            </li>
+                            <li>
+                                <a href="service_2.html">砂型鋳造</a>
+                            </li>
+                            <li>
+                                <a href="service_3.html">金型鋳造</a>
+                            </li>
+                            <li>
+                                <a href="service_4.html">DC・SDC鋳造</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="insistence.html"><strong>こだわり</strong></a></li>
+                    <li><a href="machine.html"><strong>設備紹介</strong></a></li>
+                    <li><a href="profile.html"><strong>会社案内</strong></a></li>
+                    <li><a href="recruit.html"><strong>採用案内</strong></a></li>
+                    <li><a href="contact.html"><strong>お問合せ</strong></a></li>
                 </ul>
             </div>
             <div class="c-footer__bottom">
                 <p class="c-copyright">COPYRIGHTⒸ 當麻軽合金工業株式会社 All Rights Reserved.</p>
             </div>
         </div>
-        <div class="bg bg-gradient"><img class="img img-cover img-top lazy"
-                data-src="./assets/img/common/bg-footer.jpg"></div>
+        <div class="bg bg-gradient lazy" data-bg="./assets/img/common/bg-footer-full.jpg">
+            <!-- <img class="img img-container img-top lazy" data-src="./assets/img/common/bg-footer.jpg" style="height: 680px;"> -->
+        </div>
     </footer>
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/lazyload.min.js"></script>
@@ -1024,7 +1048,7 @@
     <script src="./assets/js/script.js"></script>
     <script>
         $(function () {
-            // slideMainvisual();
+            slideMainvisual();
             slide();
         });
     </script>

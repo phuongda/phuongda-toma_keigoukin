@@ -171,6 +171,25 @@ function handleCollapsible() {
     });
 }
 
+function handleCollapMenu() {
+    $('.c-footer__menu>li>a, .c-menu>ul>li>a').click(function (e) {
+        if ($(this).next('ul').length > 0) {
+            let menu_child = $(this).next('ul'),
+                parent = $(this).parent('li');
+
+            e.preventDefault();
+
+            if (!parent.hasClass('open')) {
+                parent.addClass('open');
+                menu_child.slideDown(500);
+            } else {
+                parent.removeClass('open');
+                menu_child.slideUp(500);
+            }
+        }
+    });
+}
+
 function scrollByHash() {
     let current_hash = window.location.hash;
 
@@ -369,6 +388,7 @@ $(function () {
     btnMenuToggle();
     scrollToDiv();
     handleCollapsible();
+    handleCollapMenu();
     // handleBeforePrint();
 });
 

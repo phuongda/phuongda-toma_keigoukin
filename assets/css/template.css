@@ -1132,12 +1132,6 @@
 .c-showmore:not(.opacity):hover.showmore-animation .c-icon {
   animation: arrow_hover 1s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite;
 }
-.c-showmore.change-color:hover {
-  color: var(--color-main);
-}
-.c-showmore.change-color:hover .c-icon.ic-arrowlong-right-black {
-  background-image: url("../img/common/ic-arrowlong-right-blue.svg");
-}
 
 @keyframes arrow_hover {
   0% {
