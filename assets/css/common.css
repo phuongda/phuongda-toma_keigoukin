@@ -173,8 +173,14 @@
   background: rgba(204, 204, 204, 0.44);
 }
 
+.c-action img {
+  width: 100%;
+  max-width: 100px;
+  margin-top: 50px;
+}
+
 main:not(.p-top) .c-mainvisual {
-  max-height: 710px;
+  height: 710px;
 }
 main:not(.p-top) .c-mainvisual__cnt {
   top: 50%;
@@ -187,13 +193,32 @@ main:not(.p-top) .c-mainvisual__cnt::before {
 main:not(.p-top) .c-mainvisual__bg::before {
   background: rgba(17, 17, 17, 0.1);
 }
-main:not(.p-top) .c-action {
-  padding: 15px 0;
+main:not(.p-top) .c-action:not(.fixed) h3 {
+  margin-bottom: 27px;
 }
-main:not(.p-top) .c-action h3 {
-  margin-bottom: 60px;
+main:not(.p-top) .c-action.fixed {
+  animation: showAction 0.5s;
+}
+main:not(.p-top) .c-sclore div {
+  height: 60px;
+}
+main:not(.p-top) .c-sclore span {
+  animation: aniSclore 1.2s infinite;
 }
 
+@keyframes aniSclore {
+  100% {
+    transform: rotate(0deg) translate(0, 40px);
+  }
+}
+@keyframes showAction {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .u-wrap {
   display: inline-block;
   position: relative;
@@ -243,7 +268,21 @@ main:not(.p-top) .c-action h3 {
     font-size: 1.3rem;
   }
 }
+@media only screen and (min-width: 1537px) {
+  main:not(.p-top) .c-action.fixed {
+    height: calc(100% - 120px);
+  }
+  #main > section:not(.c-mainvisual) {
+    padding-right: 120px;
+  }
+}
 @media only screen and (max-width: 1536px) {
+  main:not(.p-top) .c-action.fixed {
+    height: calc(100vh - 100px);
+  }
+  #main > section:not(.c-mainvisual) {
+    padding-right: 100px;
+  }
   .c-banner.banner-custom {
     width: 100%;
   }
@@ -264,6 +303,11 @@ main:not(.p-top) .c-action h3 {
     min-width: auto;
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+@media screen and (max-width: 1248px) {
+  #main > section:not(.c-mainvisual) {
+    padding-right: 0;
   }
 }
 @media screen and (min-width: 992px) {

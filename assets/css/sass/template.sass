@@ -1081,7 +1081,7 @@
                         background-image: url("../img/common/ic-arrowlong-right-blue.svg")
 
 @keyframes arrow_hover
-    0%
+    from
         transform: translate(10px)
     to
         transform: translate(0)
@@ -1342,7 +1342,7 @@
     // position: absolute
     // right: 50px
     // bottom: 0
-    z-index: 100
+    z-index: 99
 /* end sclore */
 
 /* table */
@@ -2509,10 +2509,9 @@
     @include box-full()
     justify-content: center
     align-content: flex-end
-    padding: 20px 0 3% 0
+    padding: 50px 5px 30px 5px
     background: var(--color-main)
     color: white
-    position: relative
 
     h3
         writing-mode: vertical-lr
@@ -2521,6 +2520,14 @@
 
         &:hover
             opacity: 0.5
+
+    &.fixed
+        height: 100vh
+        position: fixed
+        right: 0
+        bottom: 0
+        z-index: 99
+
 /* end action */
 /* end header */
 
@@ -3988,7 +3995,7 @@
         padding-left: 28px
         position: absolute
         left: 50px
-        top: 11.7vw
+        top: 23.4%
         z-index: 3
 
         &::before
@@ -4248,7 +4255,7 @@
             margin-bottom: 110px
 
         i
-            margin-bottom: 55px
+            margin-bottom: 30px
 
 @media screen and (max-width: 1536px)
     .c-header
@@ -4321,6 +4328,7 @@
 
     .c-action
         width: 100px
+        padding-top: 30px
 
         h3
             margin-bottom: 70px
@@ -4532,6 +4540,9 @@
                     margin-bottom: 50px
 
 @media screen and (min-width: 992px)
+    .c-mainvisual
+        min-height: 710px
+
     .c-tabs-list
 
         li
@@ -4547,4 +4558,504 @@
 
             &:not(:nth-of-type(6n))
                 margin-right: 54px
+
+@media screen and (max-width: 991px)
+    [class*="l-container"]
+        padding-left: 20px
+        padding-right: 20px
+
+        [class*="l-container"]
+            padding-left: 0
+            padding-right: 0
+
+    .c-title
+
+        &.text
+
+            &10tb
+                --title-strong: 1rem
+                --title-small: 0.8rem
+
+            &12tb
+                --title-strong: 1.2rem
+                --title-small: 1rem
+
+            &13tb
+                --title-strong: 1.3rem
+                --title-small: 1rem
+
+            &14tb
+                --title-strong: 1.4rem
+                --title-small: 1rem
+
+            &15tb
+                --title-strong: 1.5rem
+                --title-small: 1rem
+
+            &16tb
+                --title-strong: 1.6rem
+                --title-small: 1rem
+
+            &18tb
+                --title-strong: 1.8rem
+                --title-small: 1rem
+
+            &20tb
+                --title-strong: 2rem
+                --title-small: 1rem
+
+            &22tb
+                --title-strong: 2.2rem
+                --title-small: 1.2rem
+
+            &24tb
+                --title-strong: 2.4rem
+                --title-small: 1.4rem
+
+            &28tb
+                --title-strong: 2.8rem
+                --title-small: 1.8rem
+
+            &30tb
+                --title-strong: 3rem
+                --title-small: 2rem
+
+            &32tb
+                --title-strong: 3.2rem
+                --title-small: 2.2rem
+
+            &34tb
+                --title-strong: 3.4rem
+                --title-small: 2.4rem
+
+            &36tb
+                --title-strong: 3.6rem
+                --title-small: 2.6rem
+
+            &38tb
+                --title-strong: 3.8rem
+                --title-small: 2.8rem
+
+            &40tb
+                --title-strong: 4rem
+                --title-small: 3rem
+
+            &42tb
+                --title-strong: 4.2rem
+                --title-small: 3.2rem
+
+            &44tb
+                --title-strong: 4.4rem
+                --title-small: 3.4rem
+
+            &46tb
+                --title-strong: 4.6rem
+                --title-small: 3.6rem
+
+            &48tb
+                --title-strong: 4.8rem
+                --title-small: 3.8rem
+
+            &50tb
+                --title-strong: 5rem
+                --title-small: 4rem
+
+            &52tb
+                --title-strong: 5.2rem
+                --title-small: 4.2rem
+
+            &54tb
+                --title-strong: 5.4rem
+                --title-small: 4.4rem
+
+            &58tb
+                --title-strong: 5.8rem
+                --title-small: 4.8rem
+
+            &60tb
+                --title-strong: 6rem
+                --title-small: 5rem
+
+            &64tb
+                --title-strong: 6.4rem
+                --title-small: 5.4rem
+
+            &72tb
+                --title-strong: 7.2rem
+                --title-small: 5.2rem
+
+            &82tb
+                --title-strong: 8.2rem
+                --title-small: 6.2rem
+
+            &96tb
+                --title-strong: 9.6rem
+                --title-small: 7.6rem
+
+    .c-button
+        min-height: 64px
+
+    .c-dl
+        --dt-width: 30%
+        --space: 10px
+
+        dt
+            max-width: unset
+
+    .c-description
+        font-size: 2.3rem
+
+@media screen and (max-width: 768px)
+    .c-title
+        --title-strong: 2.4rem
+        --title-small: 1.4rem
+
+        &.border-bottom
+            padding-bottom: 15px
+
+        &.border-short
+            --border-width: 40px
+
+        &.border-left
+
+            &.border-h25
+                --border-top: 5px
+
+            &.border-h35
+                --border-height: 32px
+                --border-top: 0
+
+            &.border-h45
+                --border-height: 32px
+
+        &.border-lr
+            padding-right: 40px
+            padding-left: 40px
+
+            &::after,
+            &::before
+                width: 30px
+
+            &.rotate
+                padding-right: 20px
+                padding-left: 20px
+
+                &.border-lg
+                    --border-height: 20px
+
+        &.text
+
+            &10sp
+                --title-strong: 1rem
+                --title-small: 0.8rem
+
+            &12sp
+                --title-strong: 1.2rem
+                --title-small: 1rem
+
+            &13sp
+                --title-strong: 1.3rem
+                --title-small: 1rem
+
+            &14sp
+                --title-strong: 1.4rem
+                --title-small: 1rem
+
+            &15sp
+                --title-strong: 1.5rem
+                --title-small: 1rem
+
+            &16sp
+                --title-strong: 1.6rem
+                --title-small: 1rem
+
+            &18sp
+                --title-strong: 1.8rem
+                --title-small: 1rem
+
+            &20sp
+                --title-strong: 2rem
+                --title-small: 1rem
+
+            &22sp
+                --title-strong: 2.2rem
+                --title-small: 1.2rem
+
+            &24sp
+                --title-strong: 2.4rem
+                --title-small: 1.4rem
+
+            &28sp
+                --title-strong: 2.8rem
+                --title-small: 1.8rem
+
+            &30sp
+                --title-strong: 3rem
+                --title-small: 2rem
+
+            &32sp
+                --title-strong: 3.2rem
+                --title-small: 2.2rem
+
+            &34sp
+                --title-strong: 3.4rem
+                --title-small: 2.4rem
+
+            &36sp
+                --title-strong: 3.6rem
+                --title-small: 2.6rem
+
+            &38sp
+                --title-strong: 3.8rem
+                --title-small: 2.8rem
+
+            &40sp
+                --title-strong: 4rem
+                --title-small: 3rem
+
+            &42sp
+                --title-strong: 4.2rem
+                --title-small: 3.2rem
+
+            &44sp
+                --title-strong: 4.4rem
+                --title-small: 3.4rem
+
+            &46sp
+                --title-strong: 4.6rem
+                --title-small: 3.6rem
+
+            &48sp
+                --title-strong: 4.8rem
+                --title-small: 3.8rem
+
+            &50sp
+                --title-strong: 5rem
+                --title-small: 4rem
+
+            &52sp
+                --title-strong: 5.2rem
+                --title-small: 4.2rem
+
+            &54sp
+                --title-strong: 5.4rem
+                --title-small: 4.4rem
+
+            &58sp
+                --title-strong: 5.8rem
+                --title-small: 4.8rem
+
+            &60sp
+                --title-strong: 6rem
+                --title-small: 5rem
+
+            &64sp
+                --title-strong: 6.4rem
+                --title-small: 5.4rem
+
+            &72sp
+                --title-strong: 7.2rem
+                --title-small: 5.2rem
+
+            &82sp
+                --title-strong: 8.2rem
+                --title-small: 6.2rem
+
+            &96sp
+                --title-strong: 9.6rem
+                --title-small: 7.6rem
+
+        .c-blockquote
+
+            &.blockquote-bg
+                padding: 10px
+
+    .c-button
+        min-height: 54px
+        font-size: 1.4rem
+
+        &.button-maxwidth
+            width: 100%
+
+    .c-gr-button
+        width: 100%
+
+        &:not([class*="justify-content-"])
+            flex-direction: column
+
+        .c-button
+            min-width: 100%
+
+            &:not(:last-child)
+                margin-right: 0
+                margin-bottom: 20px
+
+    .c-showmore
+        font-size: 1.4rem
+
+        &.icon-left
+            padding-left: 30px
+
+            &::before
+                width: 20px
+                height: 20px
+
+        &.icon-right
+
+            i
+                margin-left: 10px
+
+    .c-dl
+
+        dt,
+        dd
+            padding-left: 10px
+            padding-right: 10px
+
+    .c-collapsible
+
+        &:not(:last-child)
+            margin-bottom: 50px
+
+@media screen and (max-width: 580px)
+    .c-title
+
+        &.text
+
+            &10xs
+                --title-strong: 1rem
+                --title-small: 0.8rem
+
+            &12xs
+                --title-strong: 1.2rem
+                --title-small: 1rem
+
+            &13xs
+                --title-strong: 1.3rem
+                --title-small: 1rem
+
+            &14xs
+                --title-strong: 1.4rem
+                --title-small: 1rem
+
+            &15xs
+                --title-strong: 1.5rem
+                --title-small: 1rem
+
+            &16xs
+                --title-strong: 1.6rem
+                --title-small: 1rem
+
+            &18xs
+                --title-strong: 1.8rem
+                --title-small: 1rem
+
+            &20xs
+                --title-strong: 2rem
+                --title-small: 1rem
+
+            &22xs
+                --title-strong: 2.2rem
+                --title-small: 1.2rem
+
+            &24xs
+                --title-strong: 2.4rem
+                --title-small: 1.4rem
+
+            &28xs
+                --title-strong: 2.8rem
+                --title-small: 1.8rem
+
+            &30xs
+                --title-strong: 3rem
+                --title-small: 2rem
+
+            &32xs
+                --title-strong: 3.2rem
+                --title-small: 2.2rem
+
+            &34xs
+                --title-strong: 3.4rem
+                --title-small: 2.4rem
+
+            &36xs
+                --title-strong: 3.6rem
+                --title-small: 2.6rem
+
+            &38xs
+                --title-strong: 3.8rem
+                --title-small: 2.8rem
+
+            &40xs
+                --title-strong: 4rem
+                --title-small: 3rem
+
+            &42xs
+                --title-strong: 4.2rem
+                --title-small: 3.2rem
+
+            &44xs
+                --title-strong: 4.4rem
+                --title-small: 3.4rem
+
+            &46xs
+                --title-strong: 4.6rem
+                --title-small: 3.6rem
+
+            &48xs
+                --title-strong: 4.8rem
+                --title-small: 3.8rem
+
+            &50xs
+                --title-strong: 5rem
+                --title-small: 4rem
+
+            &52xs
+                --title-strong: 5.2rem
+                --title-small: 4.2rem
+
+            &54xs
+                --title-strong: 5.4rem
+                --title-small: 4.4rem
+
+            &58xs
+                --title-strong: 5.8rem
+                --title-small: 4.8rem
+
+            &60xs
+                --title-strong: 6rem
+                --title-small: 5rem
+
+            &64xs
+                --title-strong: 6.4rem
+                --title-small: 5.4rem
+
+            &72xs
+                --title-strong: 7.2rem
+                --title-small: 5.2rem
+
+            &82xs
+                --title-strong: 8.2rem
+                --title-small: 6.2rem
+
+            &96xs
+                --title-strong: 9.6rem
+                --title-small: 7.6rem
+
+    .c-description
+        font-size: 1.4rem
+
+    .c-dl
+
+        &:not(.dl-gray)
+            --dt-width: 100%
+
+            dt
+                max-width: unset
+                padding-bottom: 0
+                border-bottom: 0
+                text-align: left
+
+            dd
+                padding-top: 10px
 /*** end responsive ***/
