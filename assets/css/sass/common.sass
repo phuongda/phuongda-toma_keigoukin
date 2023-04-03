@@ -210,6 +210,7 @@ main:not(.p-top)
 
     .c-mainvisual
         height: 710px
+        min-height: unset
 
         &__cnt
             top: 50%
@@ -381,6 +382,11 @@ main:not(.p-top)
                 padding-right: 10px
 
 @media screen and (max-width: 1248px)
+    main:not(.p-top)
+
+        .c-mainvisual
+            height: 540px
+
     #main
 
         &>section:not(.c-mainvisual)
@@ -403,9 +409,68 @@ main:not(.p-top)
                 font-size: 1.6rem
 
 @media screen and (max-width: 991px)
+    main:not(.p-top)
+
+        .c-mainvisual
+            height: 440px
+
+            &__cnt
+                padding-left: 20px
+                left: 40px
+
+                h2
+                    font-size: 6.6rem
+
+                span
+                    font-size: 1.8rem
+
+                &::before
+                    top: 0
+
+    .c-products
+
+        &.product-box2
+
+            .item
+                padding: 20px
+
     .c-customer
         @include box()
         --col: 2
 
         .item
             font-size: 14px
+
+@media screen and (max-width: 768px)
+    main:not(.p-top)
+
+        .c-mainvisual
+            height: 340px
+
+            &__cnt
+                padding-left: 15px
+
+                h2
+                    font-size: 4.6rem
+
+                span
+                    font-size: 1.4rem
+
+    // .c-products
+
+    //     &.product-box2
+
+    //         .item
+    //             padding: 10px
+
+@media screen and (max-width: 580px)
+    main:not(.p-top)
+
+        .c-mainvisual
+            height: 240px
+
+            &__cnt
+                left: 20px
+
+                h2
+                    font-size: 3.6rem

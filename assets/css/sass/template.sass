@@ -1973,6 +1973,7 @@
 
         a
             @include box
+            height: 100%
             flex-direction: column
 
             &:hover
@@ -2424,8 +2425,8 @@
     height: 100vh
     display: flex
     flex-direction: column
-    justify-content: flex-center
-    align-items: flex-start
+    justify-content: center
+    align-items: center
     visibility: hidden
     background: var(--color-main)
     color: white
@@ -2552,7 +2553,7 @@
         position: fixed
         right: 0
         bottom: 0
-        z-index: 99
+        z-index: 98
 
 /* end action */
 /* end header */
@@ -3094,6 +3095,9 @@
 
     &.col
 
+        &1
+            --col: 1
+
         &2
             --col: 2
 
@@ -3110,6 +3114,9 @@
             --col: 6
 
     &.space
+
+        &0
+            --gap: 0px
 
         &10
             --gap: 10px
@@ -4223,6 +4230,9 @@
 
     &.col
 
+        &1
+            --col: 1
+
         &2
             --col: 2
 
@@ -4239,6 +4249,9 @@
             --col: 6
 
     &.gap
+
+        &0
+            --gap: 0px
 
         &10
             --gap: 10px
@@ -4285,7 +4298,7 @@
             top: 120px
 
     .c-menu
-        padding: 26vh 22px 50px 50px
+        padding: 26vh 40px 50px 40px
 
     .c-mainvisual
         height: calc(100vh - 120px)
@@ -4505,10 +4518,13 @@
         &__right
             width: 50%
             max-width: unset
-            justify-content: flex-start
+            // justify-content: flex-start
+            justify-content: center
 
         &__bottom
+            justify-content: center
             margin-top: 40px
+            order: 2
 
 @media screen and (max-width: 1440px) and (min-width: 992px)
     .c-banner
@@ -4631,6 +4647,61 @@
         [class*="l-container"]
             padding-left: 0
             padding-right: 0
+
+    .c-header
+        height: 100px
+
+        &.fixed
+
+            &+.clear
+                margin-top: 100px
+
+        &__logo
+            // width: calc(100% - 100px)
+            // height: 100%
+
+        &__contact
+            display: none
+
+        &.transparent
+
+            .c-header__logo
+
+                h1,
+                span
+                    color: white
+
+    .menu-toggle
+
+        p
+            margin-top: 5px
+
+    .c-footer
+        padding-top: 70px
+        padding-bottom: 70px
+
+        [class*=l-container]
+            flex-direction: column
+            padding-right: 0
+            padding-left: 0
+
+        &__left
+            width: 100%
+
+        &__middle
+            display: none
+
+        &__right
+            display: none
+
+        &__bottom
+            min-height: auto
+            justify-content: center
+
+            &.copyright-bg
+
+                .c-footer__bottom
+                    margin-top: 70px
 
     .c-cols
 
@@ -4882,6 +4953,9 @@
 
         &.col
 
+            &1tb
+                --col: 1
+
             &2tb
                 --col: 2
 
@@ -4898,6 +4972,9 @@
                 --col: 6
 
         &.space
+
+            &0tb
+                --gap: 0px
 
             &10tb
                 --gap: 10px
@@ -4924,6 +5001,9 @@
 
         &.col
 
+            &1tb
+                --col: 1
+
             &2tb
                 --col: 2
 
@@ -4940,6 +5020,9 @@
                 --col: 6
 
         &.gap
+
+            &0tb
+                --gap: 0px
 
             &10tb
                 --gap: 10px
@@ -4962,7 +5045,88 @@
             &70tb
                 --gap: 70px
 
+    .c-bl-news
+
+        &__left
+            width: 100%
+            margin-bottom: 20px
+
+        &__right
+            width: 100%
+            padding-left: 0
+
+            .c-tabs-list
+                justify-content: flex-start
+
 @media screen and (max-width: 768px)
+    .c-header
+        height: 80px
+
+        &.fixed
+
+            &+.clear
+                margin-top: 80px
+
+        &__logo
+            // width: calc(100% - 80px)
+            height: 45px
+
+            h1
+                font-size: 2.4rem
+
+        &__action
+            padding-top: 80px
+
+    .menu-toggle
+        width: 80px
+        padding: 12px
+
+    .c-menu
+        width: 100%
+        max-width: 100%
+        justify-content: center
+        align-items: center
+        padding: 100px 20px 20px 20px
+
+        .c-qr
+            margin-top: 30px
+
+        .l-contact
+            font-size: 1.2rem
+
+            strong
+                font-size: 2rem
+
+    .c-footer
+
+        &__logo
+            margin-bottom: 40px
+
+            img
+                height: 45px
+
+        &__address
+
+            p
+                font-size: 1.8rem
+
+        &__contacts
+
+            .item
+
+                a
+                    font-size: 1.8rem
+
+                strong
+                    font-size: 1.8rem
+
+                small
+                    font-size: 1.4rem
+
+        &__copyright
+            margin-top: 30px
+            font-size: 1rem
+
     .c-title
         --title-strong: 2.4rem
         --title-small: 1.4rem
@@ -5255,6 +5419,9 @@
 
         &.col
 
+            &1sp
+                --col: 1
+
             &2sp
                 --col: 2
 
@@ -5271,6 +5438,9 @@
                 --col: 6
 
         &.space
+
+            &0sp
+                --gap: 0px
 
             &10sp
                 --gap: 10px
@@ -5297,6 +5467,9 @@
 
         &.col
 
+            &1sp
+                --col: 1
+
             &2sp
                 --col: 2
 
@@ -5313,6 +5486,9 @@
                 --col: 6
 
         &.gap
+
+            &0sp
+                --gap: 0px
 
             &10sp
                 --gap: 10px
@@ -5336,6 +5512,99 @@
                 --gap: 70px
 
 @media screen and (max-width: 580px)
+    .c-header
+        height: 70px
+
+        &__logo
+            width: calc(100% - 100px)
+            height: 35px
+
+            h1
+                font-size: 1.8rem
+
+        &__action
+            display: none
+
+        &.fixed
+
+            &+.clear
+                margin-top: 70px
+
+    .menu-toggle
+        width: 70px
+        padding: 10px
+
+        span
+            margin: 3px 0
+
+        p
+            margin-top: 0
+            letter-spacing: 0
+            line-height: 1.5
+
+        &.change
+
+            span
+
+                &:nth-of-type(1)
+                    width: 27px
+                    -webkit-transform: rotate(-45deg) translate(0,7px)
+                    transform: rotate(-45deg) translate(0,7px)
+
+                &:nth-of-type(3)
+                    width: 27px
+                    -webkit-transform: rotate(45deg) translate(-3px,-10px)
+                    transform: rotate(45deg) translate(-3px,-10px)
+
+    .c-menu
+        padding-top: 70px
+
+    .c-footer
+        padding-top: 50px
+        padding-bottom: 50px
+
+        &__logo
+
+            h2
+                font-size: 2.4rem
+
+            h3
+                font-size: 1.8rem
+
+            img
+                height: 35px
+
+        &__about
+            margin-bottom: 40px
+
+            p
+                font-size: 1.5rem
+
+        &__address
+            margin-bottom: 20px
+
+            p
+                font-size: 1.5rem
+
+        &__contacts
+
+            .item
+
+                a
+                    font-size: 1.5rem
+
+                strong
+                    font-size: 1.5rem
+
+                small
+                    font-size: 1.3rem
+
+        &__bottom
+            margin-top: 0
+
+            .c-copyright
+                font-size: 1rem
+
     .c-title
 
         &.text
@@ -5467,76 +5736,76 @@
 
         &.height
 
-            &150sp
+            &150xs
                 height: 15vw!important
 
-            &180sp
+            &180xs
                 height: 18vw!important
 
-            &200sp
+            &200xs
                 height: 20vw!important
 
-            &220sp
+            &220xs
                 height: 22vw!important
 
-            &210sp
+            &210xs
                 height: 21vw!important
 
-            &240sp
+            &240xs
                 height: 24vw!important
 
-            &250sp
+            &250xs
                 height: 25vw!important
 
-            &300sp
+            &300xs
                 height: 30vw!important
 
-            &320sp
+            &320xs
                 height: 32vw!important
 
-            &330sp
+            &330xs
                 height: 33vw!important
 
-            &340sp
+            &340xs
                 height: 34vw!important
 
-            &350sp
+            &350xs
                 height: 35vw!important
 
-            &360sp
+            &360xs
                 height: 36vw!important
 
-            &380sp
+            &380xs
                 height: 36vw!important
 
-            &400sp
+            &400xs
                 height: 40vw!important
 
-            &420sp
+            &420xs
                 height: 42vw!important
 
-            &440sp
+            &440xs
                 height: 44vw!important
 
-            &450sp
+            &450xs
                 height: 45vw!important
 
-            &460sp
+            &460xs
                 height: 46vw!important
 
-            &480sp
+            &480xs
                 height: 48vw!important
 
-            &500sp
+            &500xs
                 height: 50vw!important
 
-            &540sp
+            &540xs
                 height: 54vw!important
 
-            &600sp
+            &600xs
                 height: 60vw!important
 
-            &640sp
+            &640xs
                 height: 64vw!important
 
     .c-tabs-list
@@ -5581,6 +5850,9 @@
 
         &.col
 
+            &1xs
+                --col: 1
+
             &2xs
                 --col: 2
 
@@ -5597,6 +5869,9 @@
                 --col: 6
 
         &.space
+
+            &0xs
+                --gap: 0px
 
             &10xs
                 --gap: 10px
@@ -5623,6 +5898,9 @@
 
         &.col
 
+            &1xs
+                --col: 1
+
             &2xs
                 --col: 2
 
@@ -5639,6 +5917,9 @@
                 --col: 6
 
         &.gap
+
+            &0xs
+                --gap: 0px
 
             &10xs
                 --gap: 10px
@@ -5660,4 +5941,37 @@
 
             &70xs
                 --gap: 70px
+
+@media screen and (max-width: 480px)
+    .c-header
+        height: 50px
+
+        &__logo
+            width: calc(100% - 60px)
+            height: 25px
+            line-height: 1.4
+
+            span
+                font-size: 1rem
+
+            h1
+                font-size: 1.4rem
+
+            .ml-3
+                margin-top: -7px
+
+        &.fixed
+
+            &+.clear
+                margin-top: 50px
+
+    .menu-toggle
+        width: 50px
+
+        p
+
+            font-size: 1rem
+
+    .c-menu
+        padding-top: 50px
 /*** end responsive ***/

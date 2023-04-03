@@ -181,6 +181,7 @@
 
 main:not(.p-top) .c-mainvisual {
   height: 710px;
+  min-height: unset;
 }
 main:not(.p-top) .c-mainvisual__cnt {
   top: 50%;
@@ -334,6 +335,9 @@ main:not(.p-top) .c-sclore span {
   }
 }
 @media screen and (max-width: 1248px) {
+  main:not(.p-top) .c-mainvisual {
+    height: 540px;
+  }
   #main > section:not(.c-mainvisual) {
     padding-right: 0;
   }
@@ -352,6 +356,25 @@ main:not(.p-top) .c-sclore span {
   }
 }
 @media screen and (max-width: 991px) {
+  main:not(.p-top) .c-mainvisual {
+    height: 440px;
+  }
+  main:not(.p-top) .c-mainvisual__cnt {
+    padding-left: 20px;
+    left: 40px;
+  }
+  main:not(.p-top) .c-mainvisual__cnt h2 {
+    font-size: 6.6rem;
+  }
+  main:not(.p-top) .c-mainvisual__cnt span {
+    font-size: 1.8rem;
+  }
+  main:not(.p-top) .c-mainvisual__cnt::before {
+    top: 0;
+  }
+  .c-products.product-box2 .item {
+    padding: 20px;
+  }
   .c-customer {
     display: flex;
     flex-wrap: wrap;
@@ -359,5 +382,30 @@ main:not(.p-top) .c-sclore span {
   }
   .c-customer .item {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main:not(.p-top) .c-mainvisual {
+    height: 340px;
+  }
+  main:not(.p-top) .c-mainvisual__cnt {
+    padding-left: 15px;
+  }
+  main:not(.p-top) .c-mainvisual__cnt h2 {
+    font-size: 4.6rem;
+  }
+  main:not(.p-top) .c-mainvisual__cnt span {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  main:not(.p-top) .c-mainvisual {
+    height: 240px;
+  }
+  main:not(.p-top) .c-mainvisual__cnt {
+    left: 20px;
+  }
+  main:not(.p-top) .c-mainvisual__cnt h2 {
+    font-size: 3.6rem;
   }
 }
