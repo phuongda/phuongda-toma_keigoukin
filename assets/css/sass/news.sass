@@ -1,3 +1,26 @@
-/* profile page */
 @import "core/mixin/_mixin"
 @import "core/variable/_color"
+
+.p-news
+
+    &-on
+
+        .post-content
+
+            p
+                font-size: 1.8rem
+
+@media screen and (max-width: 991px)
+    .p-news
+
+        &-on
+
+            .post-content
+
+                p
+                    font-size: 1.4rem
+
+        .c-gr-button
+
+            &.gr-button-auto
+                width: 100%

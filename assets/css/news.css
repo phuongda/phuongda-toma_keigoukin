@@ -1,1 +1,12 @@
-/* profile page */
+.p-news-on .post-content p {
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 991px) {
+  .p-news-on .post-content p {
+    font-size: 1.4rem;
+  }
+  .p-news .c-gr-button.gr-button-auto {
+    width: 100%;
+  }
+}

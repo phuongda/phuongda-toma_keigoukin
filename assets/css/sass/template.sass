@@ -144,6 +144,10 @@
         max-width: 680px
         @include box-auto()
 
+    &-600
+        max-width: 600px
+        @include box-auto()
+
     &-590
         max-width: 590px
         @include box-auto()
@@ -824,7 +828,7 @@
     span
         margin-top: 4px
 
-    &:not(.buttonopacity)
+    &:not(.button-opacity)
 
         &:hover
             border: 1px solid
@@ -980,6 +984,9 @@
                     &-email-outline-blue
                         background-image: url("../img/common/ic-email-outline.svg")
 
+                    &-check-circle-black
+                        background-image: url("../img/common/ic-check-circle-blue.svg")
+
     &.button-maxwidth
         width: min(100%, var(--max-width, 260px))!important
 
@@ -1101,8 +1108,8 @@
 
     .cate
         width: auto
-        min-width: 74px
-        min-height: 30px
+        min-width: 80px
+        min-height: 40px
         @include box()
         justify-content: center
         align-items: center
@@ -1529,7 +1536,10 @@
     .u-max-width
         max-width: 120px
 
-    .gap
+    &.gap
+
+        &0
+            --gap: 0px
 
         &15
             --gap: 15px
@@ -1617,7 +1627,7 @@
 
     dt, dd
         padding: 20px 20px
-        font-size: 1.5rem
+        font-size: 1.6rem
         line-height: 1.8
 
     dt
@@ -1636,6 +1646,9 @@
 
         &10
             --space: 10px
+
+        &20
+            --space: 20px
 
     &.height
 
@@ -1680,6 +1693,16 @@
 
         dd
             border-bottom: 0
+
+    &.dd-cl
+
+        dd
+            border-color: var(--color-default)
+
+        &black
+
+            dd
+                border-color: var(--color-black)
 
     .c-button
         width: 94px
@@ -1926,6 +1949,9 @@
 
         &-youtube
             background-image: url("../img/common/ic-youtube.svg")
+
+        &-check-circle-black
+            background-image: url("../img/common/ic-check-circle-black.svg")
 
     &.ic-logo
         background-image: url("../img/common/logo.svg")
@@ -2754,57 +2780,59 @@
 
 .c-cols
     @include box-100()
+    justify-content: space-between
+    position: relative
 
-    &[class*=c-col-]
+    .thumb
         @include box()
-        position: relative
+        width: calc(var(--width-thumb) - (var(--space, 0px) / 2))
 
-        .thumb
-            @include box()
+        figure
+            width: 100%
+            overflow: hidden
 
-            figure
+            img
                 width: 100%
-                overflow: hidden
+                @include img-cover()
 
-                img
-                    width: 100%
-                    @include img-cover()
+    .content
+        @include box()
+        width: calc(var(--width-content) - (var(--space, 0px) / 2))
 
-        .contents
-            @include box()
+        &.max-width
 
-            &.max-width
+            &-660
+                max-width: 660px
 
-                &-660
-                    max-width: 660px
+            &-750
+                max-width: 750px
 
-                &-750
-                    max-width: 750px
+    .txt
+        width: 120px
+        height: 100%
+        display: flex
+        align-items: flex-end
+        font-size: 5.4rem
+        font-weight: 300
+        line-height: 1.1
+        color: rgba(17, 17, 17, 20%)
+        writing-mode: vertical-rl
+        position: absolute
+        top: 0
+        left: -40px
+        z-index: 0
 
-        .txt
-            width: 120px
-            height: 100%
-            display: flex
-            align-items: flex-end
-            font-size: 5.4rem
-            font-weight: 300
-            line-height: 1.1
-            color: rgba(17, 17, 17, 20%)
-            writing-mode: vertical-rl
-            position: absolute
-            top: 0
-            left: -40px
-            z-index: 0
+        &.right
+            left: unset
+            right: -40px
 
-            &.right
-                left: unset
-                right: -40px
     &.col-55
-        justify-content: space-between
+        --width-thumb: 50%
+        --width-content: 50%
 
-        .thumb,
-        .content
-            width: calc(50% - (var(--space, 0px) / 2))
+    &.col-46
+        --width-thumb: 45%
+        --width-content: 55%
 
     &.space
 
@@ -3274,8 +3302,6 @@
                 width: 100%
 
                 .cate
-                    min-width: 80px
-                    min-height: 40px
                     margin-bottom: 10px
                     padding: 10px 10px 10px 10px
 
@@ -4188,14 +4214,52 @@
         width: 73%
         padding: 20px 0 20px 30px
 
-        .c-imgs2
-            @include box-full()
-            gap: var(--gap, 0px)
-            --gap: 20px
+.c-imgs
+    @include box-full()
+    gap: var(--gap, 0px)
+
+    img
+        width: calc((100% - (var(--gap, 0px) * (var(--col, 1) - 1))) / var(--col, 1))
+
+    &.col
+
+        &2
+            --col: 2
+
+        &3
+            --col: 3
+
+        &4
+            --col: 4
+
+        &5
             --col: 5
 
-            img
-                width: calc((100% - (var(--gap, 0px) * (var(--col, 1) - 1))) / var(--col, 1))
+        &6
+            --col: 6
+
+    &.gap
+
+        &10
+            --gap: 10px
+
+        &20
+            --gap: 20px
+
+        &30
+            --gap: 30px
+
+        &40
+            --gap: 40px
+
+        &50
+            --gap: 50px
+
+        &60
+            --gap: 60px
+
+        &70
+            --gap: 70px
 /* end instagram */
 /*** end template ***/
 
@@ -4568,6 +4632,15 @@
             padding-left: 0
             padding-right: 0
 
+    .c-cols
+
+        .thumb,
+        .content
+            width: 100%
+
+        .thumb
+            margin-bottom: 30px
+
     .c-title
 
         &.text
@@ -4697,13 +4770,112 @@
 
     .c-dl
         --dt-width: 30%
-        --space: 10px
+
+        &[class="space"]
+            --space: 10px
 
         dt
             max-width: unset
 
+    .c-figure
+
+        &.height
+
+            &150tb
+                height: 15vw!important
+
+            &180tb
+                height: 18vw!important
+
+            &200tb
+                height: 20vw!important
+
+            &220tb
+                height: 22vw!important
+
+            &210tb
+                height: 21vw!important
+
+            &240tb
+                height: 24vw!important
+
+            &250tb
+                height: 25vw!important
+
+            &300tb
+                height: 30vw!important
+
+            &320tb
+                height: 32vw!important
+
+            &330tb
+                height: 33vw!important
+
+            &340tb
+                height: 34vw!important
+
+            &350tb
+                height: 35vw!important
+
+            &360tb
+                height: 36vw!important
+
+            &380tb
+                height: 36vw!important
+
+            &400tb
+                height: 40vw!important
+
+            &420tb
+                height: 42vw!important
+
+            &440tb
+                height: 44vw!important
+
+            &450tb
+                height: 45vw!important
+
+            &460tb
+                height: 46vw!important
+
+            &480tb
+                height: 48vw!important
+
+            &500tb
+                height: 50vw!important
+
+            &540tb
+                height: 54vw!important
+
+            &600tb
+                height: 60vw!important
+
+            &640tb
+                height: 64vw!important
+
     .c-description
         font-size: 2.3rem
+
+    .c-tabs-list
+
+        li
+            width: calc((100% - (20px * 3)) / 4)
+
+            &:not(:nth-of-type(4n))
+                margin-right: 20px
+
+        &.tabs-box
+
+            li
+                max-width: 100%
+
+    .c-tabs-child
+
+        .item
+            width: calc((100% - (20px * 3)) / 4)
+
+            &:not(:nth-of-type(4n))
+                margin-right: 20px
 
     .c-products,
     .c-news
@@ -4726,6 +4898,48 @@
                 --col: 6
 
         &.space
+
+            &10tb
+                --gap: 10px
+
+            &20tb
+                --gap: 20px
+
+            &30tb
+                --gap: 30px
+
+            &40tb
+                --gap: 40px
+
+            &50tb
+                --gap: 50px
+
+            &60tb
+                --gap: 60px
+
+            &70tb
+                --gap: 70px
+
+    .c-imgs
+
+        &.col
+
+            &2tb
+                --col: 2
+
+            &3tb
+                --col: 3
+
+            &4tb
+                --col: 4
+
+            &5tb
+                --col: 5
+
+            &6tb
+                --col: 6
+
+        &.gap
 
             &10tb
                 --gap: 10px
@@ -4948,6 +5162,82 @@
             i
                 margin-left: 10px
 
+    .c-figure
+
+        &.height
+
+            &150sp
+                height: 15vw!important
+
+            &180sp
+                height: 18vw!important
+
+            &200sp
+                height: 20vw!important
+
+            &220sp
+                height: 22vw!important
+
+            &210sp
+                height: 21vw!important
+
+            &240sp
+                height: 24vw!important
+
+            &250sp
+                height: 25vw!important
+
+            &300sp
+                height: 30vw!important
+
+            &320sp
+                height: 32vw!important
+
+            &330sp
+                height: 33vw!important
+
+            &340sp
+                height: 34vw!important
+
+            &350sp
+                height: 35vw!important
+
+            &360sp
+                height: 36vw!important
+
+            &380sp
+                height: 36vw!important
+
+            &400sp
+                height: 40vw!important
+
+            &420sp
+                height: 42vw!important
+
+            &440sp
+                height: 44vw!important
+
+            &450sp
+                height: 45vw!important
+
+            &460sp
+                height: 46vw!important
+
+            &480sp
+                height: 48vw!important
+
+            &500sp
+                height: 50vw!important
+
+            &540sp
+                height: 54vw!important
+
+            &600sp
+                height: 60vw!important
+
+            &640sp
+                height: 64vw!important
+
     .c-dl
 
         dt,
@@ -4981,6 +5271,48 @@
                 --col: 6
 
         &.space
+
+            &10sp
+                --gap: 10px
+
+            &20sp
+                --gap: 20px
+
+            &30sp
+                --gap: 30px
+
+            &40sp
+                --gap: 40px
+
+            &50sp
+                --gap: 50px
+
+            &60sp
+                --gap: 60px
+
+            &70sp
+                --gap: 70px
+
+    .c-imgs
+
+        &.col
+
+            &2sp
+                --col: 2
+
+            &3sp
+                --col: 3
+
+            &4sp
+                --col: 4
+
+            &5sp
+                --col: 5
+
+            &6sp
+                --col: 6
+
+        &.gap
 
             &10sp
                 --gap: 10px
@@ -5131,6 +5463,104 @@
     .c-description
         font-size: 1.4rem
 
+    .c-figure
+
+        &.height
+
+            &150sp
+                height: 15vw!important
+
+            &180sp
+                height: 18vw!important
+
+            &200sp
+                height: 20vw!important
+
+            &220sp
+                height: 22vw!important
+
+            &210sp
+                height: 21vw!important
+
+            &240sp
+                height: 24vw!important
+
+            &250sp
+                height: 25vw!important
+
+            &300sp
+                height: 30vw!important
+
+            &320sp
+                height: 32vw!important
+
+            &330sp
+                height: 33vw!important
+
+            &340sp
+                height: 34vw!important
+
+            &350sp
+                height: 35vw!important
+
+            &360sp
+                height: 36vw!important
+
+            &380sp
+                height: 36vw!important
+
+            &400sp
+                height: 40vw!important
+
+            &420sp
+                height: 42vw!important
+
+            &440sp
+                height: 44vw!important
+
+            &450sp
+                height: 45vw!important
+
+            &460sp
+                height: 46vw!important
+
+            &480sp
+                height: 48vw!important
+
+            &500sp
+                height: 50vw!important
+
+            &540sp
+                height: 54vw!important
+
+            &600sp
+                height: 60vw!important
+
+            &640sp
+                height: 64vw!important
+
+    .c-tabs-list
+
+        li
+            width: calc((100% - (20px * 1)) / 2)
+
+            &:not(:nth-of-type(4n))
+                margin-right: 0
+
+            &:not(:nth-of-type(2n))
+                margin-right: 20px
+
+    .c-tabs-child
+
+        .item
+            width: calc((100% - (20px * 1)) / 2)
+
+            &:not(:nth-of-type(5n))
+                margin-right: 0
+
+            &:not(:nth-of-type(2n))
+                margin-right: 20px
+
     .c-dl
 
         &:not(.dl-gray)
@@ -5143,6 +5573,7 @@
                 text-align: left
 
             dd
+                width: 100%
                 padding-top: 10px
 
     .c-products,
@@ -5166,6 +5597,48 @@
                 --col: 6
 
         &.space
+
+            &10xs
+                --gap: 10px
+
+            &20xs
+                --gap: 20px
+
+            &30xs
+                --gap: 30px
+
+            &40xs
+                --gap: 40px
+
+            &50xs
+                --gap: 50px
+
+            &60xs
+                --gap: 60px
+
+            &70xs
+                --gap: 70px
+
+    .c-imgs
+
+        &.col
+
+            &2xs
+                --col: 2
+
+            &3xs
+                --col: 3
+
+            &4xs
+                --col: 4
+
+            &5xs
+                --col: 5
+
+            &6xs
+                --col: 6
+
+        &.gap
 
             &10xs
                 --gap: 10px

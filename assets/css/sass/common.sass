@@ -240,11 +240,19 @@ main:not(.p-top)
             height: 60px
 
         span
-            animation: aniSclore 1.2s infinite
+            animation: aniSclore2 1.2s infinite
 
-@keyframes aniSclore
+@keyframes aniSclore2
+    0%
+        transform: rotate(0deg) translate(0, 0)
+        opacity: 1
+
+    50%
+        opacity: 1
+
     100%
         transform: rotate(0deg) translate(0, 40px)
+        opacity: 1
 
 @keyframes showAction
     from
@@ -276,6 +284,24 @@ main:not(.p-top)
 @keyframes wrap-to-right
     100%
         transform: translateX(100%)
+
+.c-customer
+    @include box()
+    width: calc(100% + var(--gap))
+    margin-right: calc(-1 * var(--gap))
+    --col: 3
+    --gap: 20px
+
+    .item
+        width: calc((100% - (var(--gap, 0px) * var(--col, 1))) / var(--col, 1))
+        min-height: 76px
+        align-content: center
+        align-items: flex-start
+        margin-right: var(--gap)
+        font-family: var(--font-yu)
+
+        strong
+            flex: 1
 
 @media only screen and (min-width: 1921px)
     main:not(.p-top) .l-block.l-bg .img
@@ -375,3 +401,11 @@ main:not(.p-top)
                 max-width: 180px
                 border-color: 1px solid var(--color-default)
                 font-size: 1.6rem
+
+@media screen and (max-width: 991px)
+    .c-customer
+        @include box()
+        --col: 2
+
+        .item
+            font-size: 14px
