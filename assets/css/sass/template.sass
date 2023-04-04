@@ -328,13 +328,16 @@
             content: ""
             width: var(--border-width, 1px)
             height: var(--border-height, 100%)
-            background: var(--color-default)
+            background: var(--color-main)
             position: absolute
             left: 0
             top: var(--border-top, 0)
 
-        &.border-md
+        &.border-sm
             --border-width: 2px
+
+        &.border-md
+            --border-width: 3px
 
         &.border-lg
             --border-width: 5px
@@ -716,6 +719,9 @@
     background-position: 0 100%
     background-size: var(--background-size, 100% 1px)
     background-repeat: no-repeat
+
+    &.highlight-sm
+        --background-size: 100% 2px
 
     &.highlight-md
         --background-size: 100% 3px

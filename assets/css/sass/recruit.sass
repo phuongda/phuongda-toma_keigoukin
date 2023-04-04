@@ -37,11 +37,22 @@
             align-items: center
             margin-top: -35px
             margin-bottom: 28px
-            padding: 20px 15px
+            padding: 20px 15px 30px 15px
             background: var(--color-main)
             font-size: 1.5rem
             color: white
+            position: relative
             z-index: 10
+
+            &::before
+                content: ""
+                width: calc(100% - 30px)
+                height: 2px
+                background: white
+                position: absolute
+                bottom: 20px
+                left: 50%
+                transform: translateX(-50%)
 
             &::after
                 font-size: 1.8rem
@@ -61,6 +72,12 @@
 
                 &.bg-contents
                     background-color: #F1F1F1
+
+            .banner
+                width: 100%
+
+                img
+                    object-position: center
 
             &::before
                 content: ""
@@ -84,3 +101,94 @@
                 .cate
                     min-width: auto
                     min-height: 60px
+
+        .c-banner
+
+            &.box-content
+                height: 300px
+                --gap: 20px
+
+                .contents
+                    padding: 40px
+
+                    .c-title
+                        margin-bottom: 3px
+
+        .c-products
+
+            .c-figure
+                --width-space: 20px
+                --height-space: 20px
+
+            .num-sticker
+                width: 100px
+                min-height: 50px
+                margin-top: -30px
+                margin-bottom: 20px
+                padding: 10px 10px 17px 10px
+                font-size: 1.2rem
+
+                &::before
+                    bottom: 12px
+
+                &::after
+                    font-size: 1.4rem
+
+@media screen and (max-width: 768px)
+    .p-recruit
+
+        .c-banner
+
+            &.box-content
+                height: 240px
+                --gap: 15px
+
+                .contents
+                    padding: 30px
+
+        .c-products
+
+            .c-figure
+                --width-space: 15px
+                --height-space: 15px
+
+            .num-sticker
+                width: 80px
+                min-height: 50px
+                font-size: 1rem
+
+                &::before
+                    width: calc(100% - 20px)
+                    bottom: 12px
+
+                &::after
+                    font-size: 1.2rem
+
+            .c-showmore
+                font-size: 1.4rem
+
+@media screen and (max-width: 580px)
+    .p-recruit
+
+        .c-banner
+
+            &.box-content
+                height: 150px
+                --gap: 10px
+
+                .contents
+                    padding: 20px
+
+        .c-products
+
+            .c-figure
+                --width-space: 10px
+                --height-space: 10px
+
+            .num-sticker
+                width: 80px
+                min-height: 40px
+                padding: 7px 10px 12px 10px
+
+                &::before
+                    bottom: 10px

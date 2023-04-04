@@ -419,13 +419,16 @@
   content: "";
   width: var(--border-width, 1px);
   height: var(--border-height, 100%);
-  background: var(--color-default);
+  background: var(--color-main);
   position: absolute;
   left: 0;
   top: var(--border-top, 0);
 }
-.c-title.border-left.border-md {
+.c-title.border-left.border-sm {
   --border-width: 2px;
+}
+.c-title.border-left.border-md {
+  --border-width: 3px;
 }
 .c-title.border-left.border-lg {
   --border-width: 5px;
@@ -797,6 +800,9 @@
   background-position: 0 100%;
   background-size: var(--background-size, 100% 1px);
   background-repeat: no-repeat;
+}
+.u-highlight.highlight-sm {
+  --background-size: 100% 2px;
 }
 .u-highlight.highlight-md {
   --background-size: 100% 3px;

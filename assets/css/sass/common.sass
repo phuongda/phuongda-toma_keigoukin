@@ -357,6 +357,40 @@ main:not(.p-top)
                     transform: translateX(-100%)
                     z-index: 9
 
+.c-works
+    @include box()
+    width: calc(100% + var(--gap))
+    margin-right: calc(-1 * var(--gap))
+    margin-bottom: calc(-1 * var(--margin-bottom))
+    --col: 2
+    --gap: 40px
+    --margin-bottom: 30px
+
+    .item
+        width: calc((100% - (var(--gap, 0px) * var(--col, 1))) / var(--col, 1))
+        margin-right: var(--gap)
+        margin-bottom: var(--margin-bottom)
+        padding: 30px
+        background: white
+
+        .c-showmore
+
+            strong
+                font-size: 1.8rem
+
+            &.icon-right
+
+                i
+                    width: 70px
+                    height: 13px
+                    margin-left: 28px
+
+.l-works
+    @include box-100()
+    min-height: 300px
+    padding: 115px 100px 80px 100px
+    background: #F2F2F2
+
 @media only screen and (min-width: 1921px)
     main:not(.p-top) .l-block.l-bg .img
         height: auto !important
@@ -508,6 +542,18 @@ main:not(.p-top)
                     top: -8px
                     left: -10px
 
+                &.outline
+
+                    &::before
+                        width: 38px
+                        height: 38px
+
+                    &::after
+                        width: 40px
+                        height: 40px
+                        top: -9px
+                        left: -9px
+
 @media screen and (max-width: 768px)
     main:not(.p-top)
 
@@ -543,6 +589,17 @@ main:not(.p-top)
                     font-size: 1rem
                     top: -5px
                     left: -10px
+
+                &.outline
+
+                    &::before
+                        width: 28px
+                        height: 28px
+
+                    &::after
+                        width: 30px
+                        height: 30px
+                        top: -6px
 
 @media screen and (max-width: 580px)
     main:not(.p-top)

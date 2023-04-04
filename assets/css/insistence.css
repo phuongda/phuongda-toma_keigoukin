@@ -1,0 +1,9 @@
+.p-insistence .l-block-1 > .l-container {
+  max-width: 1056px;
+}
+.p-insistence .l-block-1 .l-block__main img {
+  width: min(1000px, 100%);
+}
+.p-insistence .l-block-2 .l-works {
+  margin-top: -46px;
+}
