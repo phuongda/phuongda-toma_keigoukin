@@ -1,0 +1,23 @@
+.p-service .l-titles.titles-custom {
+  width: min(800px, 100%);
+  min-height: 150px;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 10px;
+  background: var(--color-main);
+  color: white;
+}
+
+@media screen and (max-width: 991px) {
+  .p-service .l-titles.titles-custom {
+    min-height: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-service .l-titles.titles-custom {
+    min-height: 80px;
+  }
+  .c-title.border-left.border-lg {
+    --border-width: 2px;
+  }
+}

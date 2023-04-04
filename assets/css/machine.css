@@ -1,0 +1,38 @@
+.p-machine .l-machine-1 .c-cates .cate {
+  min-width: 400px;
+  min-height: 60px;
+}
+.p-machine .c-table.thead-box {
+  --gap: 5px;
+}
+.p-machine .c-table.thead-box thead th > div {
+  border-radius: 0;
+  font-size: 1.8rem;
+}
+.p-machine .c-table.thead-box tbody td > div {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .p-machine .l-machine-1 .c-cates .cate {
+    min-width: auto;
+    min-height: 40px;
+  }
+  .p-machine .c-table.thead-box thead th {
+    height: 50px;
+  }
+  .p-machine .c-table.thead-box thead th > div {
+    font-size: 1.5rem;
+  }
+  .p-machine .c-table.thead-box tbody td > div {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .p-machine .c-table.thead-box tbody td > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

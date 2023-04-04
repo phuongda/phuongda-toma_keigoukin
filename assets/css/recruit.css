@@ -1,0 +1,71 @@
+.p-recruit .l-block-1 .c-cates .cate {
+  min-width: 400px;
+  min-height: 80px;
+}
+.p-recruit .c-products .c-info {
+  position: relative;
+}
+.p-recruit .c-products .c-figure {
+  --width-space: 30px;
+  --height-space: 22px;
+  margin-bottom: 0;
+}
+.p-recruit .c-products .c-showmore {
+  font-size: 1.6rem;
+}
+.p-recruit .c-products .c-showmore i {
+  width: 30px;
+  height: 10px;
+}
+.p-recruit .c-products .num-sticker {
+  width: 120px;
+  min-height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: center;
+  margin-top: -35px;
+  margin-bottom: 28px;
+  padding: 20px 15px;
+  background: var(--color-main);
+  font-size: 1.5rem;
+  color: white;
+  z-index: 10;
+}
+.p-recruit .c-products .num-sticker::after {
+  font-size: 1.8rem;
+}
+.p-recruit .c-banner.box-content {
+  height: 400px;
+}
+.p-recruit .c-banner.box-content .contents {
+  width: 50%;
+  color: var(--color-default);
+}
+.p-recruit .c-banner.box-content .contents .c-title {
+  margin-left: -5px;
+  margin-bottom: -3px;
+}
+.p-recruit .c-banner.box-content .contents.bg-contents {
+  background-color: #F1F1F1;
+}
+.p-recruit .c-banner.box-content::before {
+  content: "";
+  width: calc(100% - var(--gap, 30px) * 2);
+  height: calc(100% - var(--gap, 30px) * 2);
+  border: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 991px) {
+  .p-recruit .l-block-1 .c-cates .cate {
+    min-width: auto;
+    min-height: 60px;
+  }
+}

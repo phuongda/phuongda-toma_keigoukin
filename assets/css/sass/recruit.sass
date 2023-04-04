@@ -1,0 +1,86 @@
+@import "core/mixin/_mixin"
+@import "core/variable/_color"
+
+.p-recruit
+
+    .l-block-1
+
+        .c-cates
+
+            .cate
+                min-width: 400px
+                min-height: 80px
+
+    .c-products
+
+        .c-info
+            position: relative
+
+        .c-figure
+            --width-space: 30px
+            --height-space: 22px
+            margin-bottom: 0
+
+        .c-showmore
+            font-size: 1.6rem
+
+            i
+                width: 30px
+                height: 10px
+
+        .num-sticker
+            width: 120px
+            min-height: 70px
+            @include box()
+            justify-content: center
+            align-content: flex-end
+            align-items: center
+            margin-top: -35px
+            margin-bottom: 28px
+            padding: 20px 15px
+            background: var(--color-main)
+            font-size: 1.5rem
+            color: white
+            z-index: 10
+
+            &::after
+                font-size: 1.8rem
+
+    .c-banner
+
+        &.box-content
+            height: 400px
+
+            .contents
+                width: 50%
+                color: var(--color-default)
+
+                .c-title
+                    margin-left: -5px
+                    margin-bottom: -3px
+
+                &.bg-contents
+                    background-color: #F1F1F1
+
+            &::before
+                content: ""
+                width: calc(100% - (var(--gap, 30px) * 2))
+                height: calc(100% - (var(--gap, 30px) * 2))
+                border: 1px solid white
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                z-index: 10
+                pointer-events: none
+
+@media screen and (max-width: 991px)
+    .p-recruit
+
+        .l-block-1
+
+            .c-cates
+
+                .cate
+                    min-width: auto
+                    min-height: 60px

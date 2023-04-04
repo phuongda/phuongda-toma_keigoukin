@@ -195,6 +195,9 @@
     &-bottom
         background-position: bottom
 
+    &-repeat
+        background-repeat: repeat
+
 .l-bg
     position: relative
 
@@ -537,6 +540,10 @@
             --title-strong: 2.4rem
             --title-small: 1.4rem
 
+        &26
+            --title-strong: 2.6rem
+            --title-small: 1.6rem
+
         &28
             --title-strong: 2.8rem
             --title-small: 1.8rem
@@ -705,7 +712,7 @@
 
 .u-highlight
     padding-bottom: 5px
-    background-image: linear-gradient(var(--color-main), var(--color-main))
+    background-image: linear-gradient(var(--bg-img, var(--color-default)), var(--bg-img, var(--color-default)))
     background-position: 0 100%
     background-size: var(--background-size, 100% 1px)
     background-repeat: no-repeat
@@ -747,6 +754,14 @@
 
         &-80
             background-position-y: 80%
+
+    &.highlight-cl
+
+        &gray
+            --bg-img: var(--color-gray)
+
+        &blue
+            --bg-img: var(--color-blue)
 
 .u-dashed
     text-decoration-style: dashed
@@ -1193,6 +1208,9 @@
         &250
             height: 250px!important
 
+        &280
+            height: 280px!important
+
         &300
             height: 300px!important
 
@@ -1508,8 +1526,8 @@
 
     &.boder-bottom
         width: calc(100% + (var(--gap, 10px) * 2))
-        margin-left: var(--gap, -10px)
-        margin-right: var(--gap, -10px)
+        margin-left: calc(-1 * var(--gap, 10px))
+        margin-right: calc(-1 * var(--gap, 10px))
 
         th,
         td
@@ -1546,6 +1564,9 @@
 
         &20
             --gap: 20px
+
+.l-table
+    width: 100%
 /* end table */
 
 /* list */
@@ -1814,6 +1835,9 @@
         &-arrowlong-right-black
             background-image: url("../img/common/ic-arrowlong-right-black.svg")
 
+        &-arrowlong-right-black-2
+            background-image: url("../img/common/ic-arrowlong-right-black-2.svg")
+
         &-arrowlong-right-gray
             background-image: url("../img/common/ic-arrowlong-right-gray.svg")
 
@@ -1867,6 +1891,9 @@
 
         &-email-outline
             background-image: url("../img/common/ic-email-outline.svg")
+
+        &-email-outline-black
+            background-image: url("../img/common/ic-email-outline-black.svg")
 
         &-email-outline-blue
             background-image: url("../img/common/ic-email-outline-blue.svg")
@@ -3118,6 +3145,9 @@
         &0
             --gap: 0px
 
+        &15
+            --gap: 15px
+
         &10
             --gap: 10px
 
@@ -4220,6 +4250,7 @@
     .right
         width: 73%
         padding: 20px 0 20px 30px
+/* end instagram */
 
 .c-imgs
     @include box-full()
@@ -4273,7 +4304,97 @@
 
         &70
             --gap: 70px
-/* end instagram */
+
+.c-images
+    @include box-100()
+    justify-content: space-between
+
+    &__main
+        width: calc(var(--width) - (var(--gap, 0px) / 2))
+        @include box()
+
+    &__group
+        width: calc((100% - var(--width)) - (var(--gap, 0px) / 2))
+        @include box()
+        row-gap: var(--gap, 0px)
+
+    &.col
+
+        &55
+            --width: 50%
+
+        &73
+            --width: 70%
+
+    &.gap
+
+        &0
+            --gap: 0px
+
+        &10
+            --gap: 10px
+
+        &20
+            --gap: 20px
+
+        &30
+            --gap: 30px
+
+        &40
+            --gap: 40px
+
+        &50
+            --gap: 50px
+
+        &60
+            --gap: 60px
+
+        &70
+            --gap: 70px
+
+/* info footer */
+.c-contacts
+    @include box-100()
+    justify-content: center
+    align-items: center
+
+    .left,
+    .right
+        @include box()
+        min-height: 160px
+        flex: 1
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    .left
+
+        .item
+
+            .c-icon
+                width: 36px
+                height: 36px
+
+    .right
+
+        .item
+
+            .c-icon
+                width: 30px
+                height: 24px
+
+    .item
+
+        a
+            @include box()
+            align-items: center
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        &:hover
+            color: var(--color-main)
+/* end info footer */  
 /*** end template ***/
 
 /*** responsive ***/
@@ -4639,6 +4760,11 @@
             &:not(:nth-of-type(6n))
                 margin-right: 54px
 
+    .c-info-footers
+
+        .c-banner
+            height: 460px
+
 @media screen and (max-width: 991px)
     [class*="l-container"]
         padding-left: 20px
@@ -4710,6 +4836,9 @@
             width: 100%
 
         .thumb
+            width: min(500px, 100%)
+            margin-left: auto
+            margin-right: auto
             margin-bottom: 30px
 
     .c-title
@@ -4755,6 +4884,10 @@
             &24tb
                 --title-strong: 2.4rem
                 --title-small: 1.4rem
+
+            &26tb
+                --title-strong: 2.6rem
+                --title-small: 1.6rem
 
             &28tb
                 --title-strong: 2.8rem
@@ -4873,6 +5006,9 @@
             &250tb
                 height: 25vw!important
 
+            &280tb
+                height: 28vw!important
+
             &300tb
                 height: 30vw!important
 
@@ -4979,6 +5115,9 @@
             &10tb
                 --gap: 10px
 
+            &15tb
+                --gap: 15px
+
             &20tb
                 --gap: 20px
 
@@ -5057,6 +5196,11 @@
 
             .c-tabs-list
                 justify-content: flex-start
+
+    .c-info-footers
+
+        .c-banner
+            height: 340px
 
 @media screen and (max-width: 768px)
     .c-header
@@ -5206,6 +5350,10 @@
                 --title-strong: 2.4rem
                 --title-small: 1.4rem
 
+            &26sp
+                --title-strong: 2.6rem
+                --title-small: 1.6rem
+
             &28sp
                 --title-strong: 2.8rem
                 --title-small: 1.8rem
@@ -5351,6 +5499,9 @@
             &250sp
                 height: 25vw!important
 
+            &280sp
+                height: 28vw!important
+
             &300sp
                 height: 30vw!important
 
@@ -5445,6 +5596,9 @@
             &10sp
                 --gap: 10px
 
+            &15sp
+                --gap: 15px
+
             &20sp
                 --gap: 20px
 
@@ -5510,6 +5664,47 @@
 
             &70sp
                 --gap: 70px
+
+    .c-contacts
+        flex-direction: column
+
+        .left,
+        .right
+            width: 100%
+            max-width: 400px
+            min-height: auto
+
+        .left
+            margin-bottom: 20px
+            padding-bottom: 30px
+            border-right: 0!important
+            border-bottom: 1px solid!important
+
+        .right
+
+            .item
+
+                .c-icon
+                    width: 24px
+                    height: 24px
+
+        .c-button
+            margin-left: 0!important
+            margin-right: 0!important
+
+            &.min-width-330
+                min-width: auto!important
+
+    .c-info-footers
+
+        .c-banner
+            height: 280px
+
+    .l-table
+        overflow: auto
+
+        table
+            min-width: 680px
 
 @media screen and (max-width: 580px)
     .c-header
@@ -5649,6 +5844,10 @@
                 --title-strong: 2.4rem
                 --title-small: 1.4rem
 
+            &26xs
+                --title-strong: 2.6rem
+                --title-small: 1.6rem
+
             &28xs
                 --title-strong: 2.8rem
                 --title-small: 1.8rem
@@ -5756,6 +5955,9 @@
 
             &250xs
                 height: 25vw!important
+
+            &280xs
+                height: 28vw!important
 
             &300xs
                 height: 30vw!important
@@ -5876,6 +6078,9 @@
             &10xs
                 --gap: 10px
 
+            &15xs
+                --gap: 15px
+
             &20xs
                 --gap: 20px
 
@@ -5941,6 +6146,11 @@
 
             &70xs
                 --gap: 70px
+
+    .c-info-footers
+
+        .c-banner
+            height: 180px
 
 @media screen and (max-width: 480px)
     .c-header

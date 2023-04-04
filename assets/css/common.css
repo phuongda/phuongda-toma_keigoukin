@@ -276,6 +276,59 @@ main:not(.p-top) .c-sclore span {
   flex: 1;
 }
 
+.c-merit .item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 30px 30px 160px;
+  position: relative;
+}
+.c-merit .item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray);
+}
+.c-merit .item .c-description {
+  width: min(960px, 100%);
+}
+.c-merit .item .c-title::before {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-main);
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  transform: translateX(-100%);
+}
+.c-merit .item .c-title.outline::before {
+  width: 58px;
+  height: 58px;
+  background: white;
+  color: var(--color-main);
+  z-index: 10;
+}
+.c-merit .item .c-title.outline::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: var(--color-main);
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: absolute;
+  top: -11px;
+  left: -14px;
+  transform: translateX(-100%);
+  z-index: 9;
+}
+
 @media only screen and (min-width: 1921px) {
   main:not(.p-top) .l-block.l-bg .img {
     height: auto !important;
@@ -383,6 +436,16 @@ main:not(.p-top) .c-sclore span {
   .c-customer .item {
     font-size: 14px;
   }
+  .c-merit .item {
+    padding: 30px 20px 20px 70px;
+  }
+  .c-merit .item .c-title::before {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    top: -8px;
+    left: -10px;
+  }
 }
 @media screen and (max-width: 768px) {
   main:not(.p-top) .c-mainvisual {
@@ -396,6 +459,16 @@ main:not(.p-top) .c-sclore span {
   }
   main:not(.p-top) .c-mainvisual__cnt span {
     font-size: 1.4rem;
+  }
+  .c-merit .item {
+    padding: 20px 10px 10px 50px;
+  }
+  .c-merit .item .c-title::before {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    top: -5px;
+    left: -10px;
   }
 }
 @media screen and (max-width: 580px) {
