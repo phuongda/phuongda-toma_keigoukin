@@ -1,12 +1,24 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap");
+@font-face {
+  font-family: "Meiryo";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/meiryo.ttc);
+}
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/YuGothM.ttc);
+  font-family: "YuGothic";
+}
 :root {
-  --font-yu: Yu Gothic;
+  --font-yu: YuGothic;
   --font-mei: Meiryo;
   --font-ar: A-OTF-R;
   --font-am: A-OTF-M;
   --font-gr: G-OTF-R;
-  --font-default: Yu Gothic;
+  --font-default: YuGothic;
   --font-weight-default: bold;
   --color-default: #111111;
   --color-main: #00349F;
@@ -194,6 +206,12 @@
 }
 .l-container-900 {
   max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.l-container-840 {
+  max-width: 840px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1345,6 +1363,15 @@
   position: absolute;
   left: 0;
   bottom: 0;
+}
+.c-figure .ovh {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-figure .ovh img {
+  width: 100%;
 }
 .c-figure.figure-border::before {
   content: "";
@@ -4658,6 +4685,7 @@
     padding-right: 0;
   }
   .c-header {
+    padding-left: 15px;
     height: 100px;
   }
   .c-header.fixed + .clear {
@@ -4697,6 +4725,19 @@
   }
   .c-footer__bottom.copyright-bg .c-footer__bottom {
     margin-top: 70px;
+  }
+  .c-mainvisual__cnt {
+    top: unset;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+  }
+  .c-mainvisual__cnt h2 {
+    -webkit-text-stroke: 1px white;
+  }
+  .c-mainvisual__cnt span {
+    display: block;
+    margin-top: 15px;
   }
   .c-cols .thumb,
   .c-cols .content {
@@ -4834,6 +4875,22 @@
   }
   .c-button {
     min-height: 64px;
+  }
+  .c-gr-button {
+    width: 100%;
+  }
+  .c-gr-button.gr-button-auto {
+    width: 100%;
+  }
+  .c-gr-button:not([class*=justify-content-]) {
+    flex-direction: column;
+  }
+  .c-gr-button .c-button {
+    min-width: 100%;
+  }
+  .c-gr-button .c-button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
   .c-dl {
     --dt-width: 30%;
@@ -4997,6 +5054,27 @@
   .c-news.space70tb {
     --gap: 70px;
   }
+  .c-products.sliders .swiper,
+  .c-news.sliders .swiper {
+    padding: 0 40px;
+  }
+  .c-products.sliders .swiper-slide .c-figure.height210,
+  .c-news.sliders .swiper-slide .c-figure.height210 {
+    height: 30vw !important;
+  }
+  .c-products.sliders .swiper-slide .c-figure.height240,
+  .c-news.sliders .swiper-slide .c-figure.height240 {
+    height: 30vw !important;
+  }
+  .c-products.sliders .swiper-button-prev, .c-products.sliders .swiper-button-next,
+  .c-news.sliders .swiper-button-prev,
+  .c-news.sliders .swiper-button-next {
+    top: 43%;
+  }
+  .c-products.product-special .c-figure,
+  .c-news.product-special .c-figure {
+    margin-bottom: -25px;
+  }
   .c-imgs.col1tb {
     --col: 1;
   }
@@ -5050,13 +5128,25 @@
   .c-bl-news__right .c-tabs-list {
     justify-content: flex-start;
   }
+  .c-instagram .left {
+    width: 40%;
+    padding: 30px 10px 30px 10px;
+  }
+  .c-instagram .right {
+    width: 60%;
+    padding: 0 0 0 10px;
+  }
   .c-info-footers .c-banner {
+    height: 340px;
+  }
+  .c-banner {
     height: 340px;
   }
 }
 @media screen and (max-width: 768px) {
   .c-header {
     height: 80px;
+    padding-left: 15px;
   }
   .c-header.fixed + .clear {
     margin-top: 80px;
@@ -5090,6 +5180,9 @@
   .c-menu .l-contact strong {
     font-size: 2rem;
   }
+  .c-banner {
+    height: 280px;
+  }
   .c-footer__logo {
     margin-bottom: 40px;
   }
@@ -5111,6 +5204,26 @@
   .c-footer__copyright {
     margin-top: 30px;
     font-size: 1rem;
+  }
+  .c-mainvisual {
+    height: calc(100vh - 80px);
+  }
+  .c-mainvisual__cnt {
+    left: 20px;
+    padding-left: 18px;
+  }
+  .c-mainvisual__cnt h2 {
+    font-size: 6.6rem;
+  }
+  .c-mainvisual__cnt h2 small {
+    font-size: 3.6rem;
+  }
+  .c-mainvisual__cnt span {
+    margin-top: 10px;
+    font-size: 1.8rem;
+  }
+  .c-mainvisual__cnt::before {
+    max-height: 140px;
   }
   .c-title {
     --title-strong: 2.4rem;
@@ -5491,6 +5604,13 @@
   .c-imgs.gap70sp {
     --gap: 70px;
   }
+  .c-instagram .left {
+    width: 100%;
+  }
+  .c-instagram .right {
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
   .c-contacts {
     flex-direction: column;
   }
@@ -5522,9 +5642,26 @@
   }
   .l-table {
     overflow: auto;
+    padding-bottom: 20px;
+    /* width */
+    /* Track */
+    /* Handle */
+    /* Handle on hover */
   }
   .l-table table {
     min-width: 680px;
+  }
+  .l-table::-webkit-scrollbar {
+    height: 10px;
+  }
+  .l-table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .l-table::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  .l-table::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }
 @media screen and (max-width: 580px) {
@@ -5606,6 +5743,26 @@
   }
   .c-footer__bottom .c-copyright {
     font-size: 1rem;
+  }
+  .c-mainvisual {
+    height: calc(100vh - 70px);
+  }
+  .c-mainvisual__cnt {
+    left: 20px;
+    padding-left: 18px;
+  }
+  .c-mainvisual__cnt h2 {
+    font-size: 4.6rem;
+  }
+  .c-mainvisual__cnt h2 small {
+    font-size: 2.4rem;
+  }
+  .c-mainvisual__cnt span {
+    margin-top: 10px;
+    font-size: 1.6rem;
+  }
+  .c-mainvisual__cnt::before {
+    max-height: 100px;
   }
   .c-title.text10xs {
     --title-strong: 1rem;
@@ -5900,6 +6057,14 @@
   .c-news.space70xs {
     --gap: 70px;
   }
+  .c-products.sliders .swiper-slide .c-figure.height210,
+  .c-news.sliders .swiper-slide .c-figure.height210 {
+    height: 59vw !important;
+  }
+  .c-products.sliders .swiper-slide .c-figure.height240,
+  .c-news.sliders .swiper-slide .c-figure.height240 {
+    height: 59vw !important;
+  }
   .c-imgs.col1xs {
     --col: 1;
   }
@@ -5942,6 +6107,9 @@
   .c-imgs.gap70xs {
     --gap: 70px;
   }
+  .c-banner {
+    height: 240px;
+  }
   .c-info-footers .c-banner {
     height: 180px;
   }
@@ -5975,6 +6143,25 @@
   }
   .c-menu {
     padding-top: 50px;
+  }
+  .c-mainvisual {
+    height: calc(100vh - 50px);
+  }
+  .c-mainvisual__cnt {
+    padding-left: 15px;
+  }
+  .c-mainvisual__cnt h2 {
+    font-size: 3rem;
+  }
+  .c-mainvisual__cnt h2 small {
+    font-size: 1.8rem;
+  }
+  .c-mainvisual__cnt span {
+    font-size: 1.3rem;
+  }
+  .c-mainvisual__cnt::before {
+    max-height: 70px;
+    top: -2.5px;
   }
 }
 /*** end responsive ***/

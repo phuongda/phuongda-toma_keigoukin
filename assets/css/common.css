@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap");
+@font-face {
+  font-family: "Meiryo";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/meiryo.ttc);
+}
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/YuGothM.ttc);
+  font-family: "YuGothic";
+}
 .c-header {
   background: var(--color-main);
   color: white;
@@ -452,7 +464,8 @@ main:not(.p-top) .c-sclore span {
     left: 40px;
   }
   main:not(.p-top) .c-mainvisual__cnt h2 {
-    font-size: 6.6rem;
+    font-size: 4.6rem;
+    -webkit-text-stroke: 1px white;
   }
   main:not(.p-top) .c-mainvisual__cnt span {
     font-size: 1.8rem;
@@ -460,8 +473,28 @@ main:not(.p-top) .c-sclore span {
   main:not(.p-top) .c-mainvisual__cnt::before {
     top: 0;
   }
+  .c-products .item .c-figure .sticker-counter {
+    width: 60px;
+    height: 60px;
+    padding: 10px 10px 16px 10px;
+  }
+  .c-products .item .c-figure .sticker-counter.counter::before {
+    font-size: 2.2rem;
+  }
   .c-products.product-box2 .item {
     padding: 20px;
+  }
+  .c-products.checkmark .item .sticker-local {
+    height: 50px;
+  }
+  .c-products.checkmark .c-figure {
+    margin-bottom: 65px;
+    --width-space: 20px;
+    --height-space: 20px;
+  }
+  .c-banner.banner-custom .contents {
+    padding: 15px 20px;
+    left: 20px;
   }
   .c-customer {
     display: flex;
@@ -491,8 +524,26 @@ main:not(.p-top) .c-sclore span {
     top: -9px;
     left: -9px;
   }
+  .l-works {
+    padding: 70px 20px 20px 20px;
+  }
+  .c-works {
+    --gap: 20px;
+    --margin-bottom: 20px;
+  }
+  .c-works .item {
+    padding: 20px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .c-showmore {
+    font-size: 1.4rem;
+  }
+  .c-showmore.icon-right i {
+    width: 38px;
+    height: 8px;
+    margin-left: 10px;
+  }
   main:not(.p-top) .c-mainvisual {
     height: 340px;
   }
@@ -500,10 +551,27 @@ main:not(.p-top) .c-sclore span {
     padding-left: 15px;
   }
   main:not(.p-top) .c-mainvisual__cnt h2 {
-    font-size: 4.6rem;
+    font-size: 3.6rem;
   }
   main:not(.p-top) .c-mainvisual__cnt span {
     font-size: 1.4rem;
+  }
+  .c-products.checkmark .item .sticker-local {
+    height: 40px;
+  }
+  .c-products.checkmark .c-figure {
+    --width-space: 15px;
+    --height-space: 15px;
+    margin-bottom: 45px;
+  }
+  .c-products.checkmark .c-showmore.icon-right i {
+    width: 38px;
+    height: 8px;
+    margin-left: 10px;
+  }
+  .c-banner.banner-custom .contents {
+    padding: 15px 20px;
+    left: 10px;
   }
   .c-merit .item {
     padding: 20px 10px 10px 50px;
@@ -524,8 +592,20 @@ main:not(.p-top) .c-sclore span {
     height: 30px;
     top: -6px;
   }
+  .c-works .item .c-showmore strong {
+    font-size: 1.4rem;
+  }
+  .c-works .item .c-showmore.icon-right i {
+    width: 38px;
+    height: 8px;
+    margin-left: 18px;
+  }
 }
 @media screen and (max-width: 580px) {
+  .c-products.checkmark .c-figure {
+    --width-space: 10px;
+    --height-space: 10px;
+  }
   main:not(.p-top) .c-mainvisual {
     height: 240px;
   }
@@ -533,6 +613,15 @@ main:not(.p-top) .c-sclore span {
     left: 20px;
   }
   main:not(.p-top) .c-mainvisual__cnt h2 {
-    font-size: 3.6rem;
+    font-size: 2.6rem;
+  }
+  .c-banner.banner-custom .contents {
+    width: auto;
+    min-width: 60%;
+    max-width: 70%;
+    padding: 10px 15px;
+  }
+  .c-works {
+    --col: 1;
   }
 }

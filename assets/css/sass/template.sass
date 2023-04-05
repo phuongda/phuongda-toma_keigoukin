@@ -140,6 +140,10 @@
         max-width: 900px
         @include box-auto()
 
+    &-840
+        max-width: 840px
+        @include box-auto()
+
     &-680
         max-width: 680px
         @include box-auto()
@@ -1276,6 +1280,12 @@
         position: absolute
         left: 0
         bottom: 0
+
+    .ovh
+        @include box-full()
+
+        img
+            width: 100%
 
     &.figure-border
 
@@ -4781,6 +4791,7 @@
             padding-right: 0
 
     .c-header
+        padding-left: 15px
         height: 100px
 
         &.fixed
@@ -4834,6 +4845,21 @@
 
                 .c-footer__bottom
                     margin-top: 70px
+
+    .c-mainvisual
+
+        &__cnt
+            top: unset
+            top: 50%
+            left: 40px
+            transform: translateY(-50%)
+
+            h2
+                -webkit-text-stroke: 1px white
+
+            span
+                display: block
+                margin-top: 15px
 
     .c-cols
 
@@ -4977,6 +5003,22 @@
 
     .c-button
         min-height: 64px
+
+    .c-gr-button
+        width: 100%
+
+        &.gr-button-auto
+            width: 100%
+
+        &:not([class*="justify-content-"])
+            flex-direction: column
+
+        .c-button
+            min-width: 100%
+
+            &:not(:last-child)
+                margin-right: 0
+                margin-bottom: 20px
 
     .c-dl
         --dt-width: 30%
@@ -5142,6 +5184,32 @@
             &70tb
                 --gap: 70px
 
+        &.sliders
+
+            .swiper
+                padding: 0 40px
+
+                &-slide
+
+                    .c-figure
+
+                        &.height
+
+                            &210
+                                height: 30vw !important
+
+                            &240
+                                height: 30vw !important
+
+                &-button-prev,
+                &-button-next
+                    top: 43%
+
+        &.product-special
+
+            .c-figure
+                margin-bottom: -25px
+
     .c-imgs
 
         &.col
@@ -5203,14 +5271,28 @@
             .c-tabs-list
                 justify-content: flex-start
 
+    .c-instagram
+
+        .left
+            width: 40%
+            padding: 30px 10px 30px 10px
+
+        .right
+            width: 60%
+            padding: 0 0 0 10px
+
     .c-info-footers
 
         .c-banner
             height: 340px
 
+    .c-banner
+        height: 340px
+
 @media screen and (max-width: 768px)
     .c-header
         height: 80px
+        padding-left: 15px
 
         &.fixed
 
@@ -5247,6 +5329,9 @@
             strong
                 font-size: 2rem
 
+    .c-banner
+        height: 280px
+
     .c-footer
 
         &__logo
@@ -5276,6 +5361,26 @@
         &__copyright
             margin-top: 30px
             font-size: 1rem
+
+    .c-mainvisual
+        height: calc(100vh - 80px)
+
+        &__cnt
+            left: 20px
+            padding-left: 18px
+
+            h2
+                font-size: 6.6rem
+
+                small
+                    font-size: 3.6rem
+
+            span
+                margin-top: 10px
+                font-size: 1.8rem
+
+            &::before
+                max-height: 140px
 
     .c-title
         --title-strong: 2.4rem
@@ -5671,6 +5776,15 @@
             &70sp
                 --gap: 70px
 
+    .c-instagram
+
+        .left
+            width: 100%
+
+        .right
+            width: 100%
+            padding: 20px 0 0 0
+
     .c-contacts
         flex-direction: column
 
@@ -5708,9 +5822,27 @@
 
     .l-table
         overflow: auto
+        padding-bottom: 20px
 
         table
             min-width: 680px
+
+        /* width */
+        &::-webkit-scrollbar
+            // width: 10px
+            height: 10px
+
+        /* Track */
+        &::-webkit-scrollbar-track
+            background: #f1f1f1
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb
+            background: #888
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover
+            background: #555
 
 @media screen and (max-width: 580px)
     .c-header
@@ -5805,6 +5937,26 @@
 
             .c-copyright
                 font-size: 1rem
+
+    .c-mainvisual
+        height: calc(100vh - 70px)
+
+        &__cnt
+            left: 20px
+            padding-left: 18px
+
+            h2
+                font-size: 4.6rem
+
+                small
+                    font-size: 2.4rem
+
+            span
+                margin-top: 10px
+                font-size: 1.6rem
+
+            &::before
+                max-height: 100px
 
     .c-title
 
@@ -6105,6 +6257,22 @@
             &70xs
                 --gap: 70px
 
+        &.sliders
+
+            .swiper
+
+                &-slide
+
+                    .c-figure
+
+                        &.height
+
+                            &210
+                                height: 59vw !important
+
+                            &240
+                                height: 59vw !important
+
     .c-imgs
 
         &.col
@@ -6153,6 +6321,9 @@
             &70xs
                 --gap: 70px
 
+    .c-banner
+        height: 240px
+
     .c-info-footers
 
         .c-banner
@@ -6190,4 +6361,23 @@
 
     .c-menu
         padding-top: 50px
+
+    .c-mainvisual
+        height: calc(100vh - 50px)
+
+        &__cnt
+            padding-left: 15px
+
+            h2
+                font-size: 3rem
+
+                small
+                    font-size: 1.8rem
+
+            span
+                font-size: 1.3rem
+
+            &::before
+                max-height: 70px
+                top: -2.5px
 /*** end responsive ***/
