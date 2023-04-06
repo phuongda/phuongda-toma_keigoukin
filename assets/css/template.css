@@ -2462,13 +2462,16 @@
   opacity: 0;
   pointer-events: none;
 }
+.c-menu > ul {
+  width: 100%;
+  max-width: 180px;
+}
 .c-menu li {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px 20px;
 }
 .c-menu li:not(:last-child) {
   border: 0;
@@ -2478,6 +2481,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 20px;
   padding-left: 40px;
   color: white;
   position: relative;
@@ -2506,12 +2510,13 @@
 }
 .c-menu li ul {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   display: none;
-  padding: 20px 0 0 0;
-  transition: var(--transition-default);
+  padding: 10px 0 5px 0;
 }
 .c-menu li ul li {
-  padding: 10px 10px 10px 40px;
+  padding: 0 0 0 40px;
   font-size: 1.6rem;
 }
 .c-menu li ul li a {
@@ -2552,7 +2557,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-end;
+  align-content: space-between;
   padding: 50px 5px 30px 5px;
   background: var(--color-main);
   color: white;
@@ -4007,7 +4012,6 @@
   width: 100%;
   display: none;
   padding: 20px 0 0 0;
-  transition: var(--transition-default);
 }
 .c-footer__menu li ul li {
   padding-left: 0;
@@ -4413,7 +4417,7 @@
     top: 120px;
   }
   .c-menu {
-    padding: 26vh 40px 50px 40px;
+    padding: 120px 40px 40px 40px;
   }
   .c-mainvisual {
     height: calc(100vh - 120px);
@@ -4501,7 +4505,7 @@
   }
   .c-menu {
     justify-content: center;
-    padding: 100px 50px 50px 50px;
+    padding: 100px 40px 40px 40px;
   }
   .c-action {
     width: 100px;
@@ -4741,13 +4745,17 @@
   }
   .c-cols .thumb,
   .c-cols .content {
-    width: 100%;
-  }
-  .c-cols .thumb {
-    width: min(500px, 100%);
+    width: min(700px, 100%);
     margin-left: auto;
     margin-right: auto;
+  }
+  .c-cols .thumb {
     margin-bottom: 30px;
+  }
+  .c-cols + [class*=l-container] {
+    width: min(700px, 100%);
+    margin-left: auto;
+    margin-right: auto;
   }
   .c-title.text10tb {
     --title-strong: 1rem;
@@ -5169,7 +5177,7 @@
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px 20px 20px;
+    padding: 80px 20px 20px 20px;
   }
   .c-menu .c-qr {
     margin-top: 30px;

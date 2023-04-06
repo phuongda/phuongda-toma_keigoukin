@@ -2482,28 +2482,28 @@
     opacity: 0
     pointer-events: none
 
+    &>ul
+        width: 100%
+        max-width: 180px
+
     li
         @include box-100()
         flex-direction: column
         align-items: flex-start
-        padding: 10px 20px
 
         &:not(:last-child)
             border: 0
-            // border-bottom: 1px solid
-            // border-color: white!important
 
         a
             @include box-100()
             flex-direction: column
+            margin-bottom: 20px
             padding-left: 40px
             color: white
             position: relative
             transition: var(--transition-default)
 
             span
-                // margin-top: 2px
-                // padding-left: 10px
                 font-size: 1.2rem
                 line-height: 1.8
 
@@ -2528,14 +2528,13 @@
                 //     display: flex
 
         ul
-            width: 100%
-            // @include box-100()
+            @include box-100()
             display: none
-            padding: 20px 0 0 0
-            transition: var(--transition-default)
+            padding: 10px 0 5px 0
+            // transition: var(--transition-default)
 
             li
-                padding: 10px 10px 10px 40px
+                padding: 0 0 0 40px
                 font-size: 1.6rem
 
                 a
@@ -2578,7 +2577,8 @@
 .c-action
     @include box-full()
     justify-content: center
-    align-content: flex-end
+    // align-content: flex-end
+    align-content: space-between
     padding: 50px 5px 30px 5px
     background: var(--color-main)
     color: white
@@ -4020,7 +4020,7 @@
                 width: 100%
                 display: none
                 padding: 20px 0 0 0
-                transition: var(--transition-default)
+                // transition: var(--transition-default)
 
                 li
                     padding-left: 0
@@ -4435,7 +4435,8 @@
             top: 120px
 
     .c-menu
-        padding: 26vh 40px 50px 40px
+        // padding: 26vh 40px 50px 40px
+        padding: 120px 40px 40px 40px
 
     .c-mainvisual
         height: calc(100vh - 120px)
@@ -4538,7 +4539,7 @@
 
     .c-menu
         justify-content: center
-        padding: 100px 50px 50px 50px
+        padding: 100px 40px 40px 40px
 
     .c-action
         width: 100px
@@ -4865,13 +4866,21 @@
 
         .thumb,
         .content
-            width: 100%
-
-        .thumb
-            width: min(500px, 100%)
+            // width: 100%
+            width: min(700px, 100%)
             margin-left: auto
             margin-right: auto
+
+        .thumb
+            // width: min(500px, 100%)
+            // margin-left: auto
+            // margin-right: auto
             margin-bottom: 30px
+
+        &+[class*="l-container"]
+            width: min(700px, 100%)
+            margin-left: auto
+            margin-right: auto
 
     .c-title
 
@@ -5318,7 +5327,7 @@
         max-width: 100%
         justify-content: center
         align-items: center
-        padding: 100px 20px 20px 20px
+        padding: 80px 20px 20px 20px
 
         .c-qr
             margin-top: 30px

@@ -47,6 +47,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
+  text-indent: 2px;
   color: var(--color-main);
   position: absolute;
   z-index: 10;
@@ -149,6 +150,9 @@
   }
   .p-insistence .l-flow .c-flow .gr-flow:last-child .item:last-child {
     padding-bottom: 0;
+  }
+  .p-insistence .l-flow .c-flow .gr-flow:last-child .item:last-child::before {
+    display: none;
   }
   .p-insistence .l-flow .c-flow .item {
     padding-bottom: 35px;

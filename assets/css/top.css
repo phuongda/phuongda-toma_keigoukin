@@ -33,3 +33,11 @@
     max-width: 627px;
   }
 }
+@media only screen and (max-width: 991px) {
+  .l-blocks.l-top-5 .c-cols.col-55 .thumb img {
+    max-width: 100%;
+  }
+  .l-blocks.l-top-5 .c-cols.col-55 .content img {
+    max-width: 100%;
+  }
+}

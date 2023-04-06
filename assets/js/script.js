@@ -125,18 +125,18 @@ function stickyAction() {
         height_action = action.height(),
         height_header = $(header).height();
 
-    if (!($('main.p-top').length)) {
-        if (scroll >= (height_action + height_header)) $(action).addClass('fixed');
+    // if (!($('main.p-top').length)) {
+    //     if (scroll >= (height_action + height_header)) $(action).addClass('fixed');
 
-        wp.scroll(function () {
-            scroll = wp.scrollTop();
+    //     wp.scroll(function () {
+    //         scroll = wp.scrollTop();
 
-            if (scroll >= (height_action + height_header)) $(action).addClass('fixed');
-            else $(action).removeClass('fixed');
-        });
-    } else {
-        $(action).addClass('fixed');
-    }
+    //         if (scroll >= (height_action + height_header)) $(action).addClass('fixed');
+    //         else $(action).removeClass('fixed');
+    //     });
+    // } else {
+    $(action).addClass('fixed');
+    // }
 }
 
 function btnMenuToggle() {
@@ -202,10 +202,10 @@ function handleCollapMenu() {
 
             if (!parent.hasClass('open')) {
                 parent.addClass('open');
-                menu_child.slideDown(500);
+                menu_child.slideDown();
             } else {
                 parent.removeClass('open');
-                menu_child.slideUp(500);
+                menu_child.slideUp();
             }
         }
     });
