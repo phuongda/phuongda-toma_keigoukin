@@ -6,10 +6,16 @@
   src: url(../font/meiryo.ttc);
 }
 @font-face {
+  font-family: "YuGothicB";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/YuGothB.ttc);
+}
+@font-face {
+  font-family: "YuGothic";
   font-style: normal;
   font-weight: 300;
   src: url(../font/YuGothM.ttc);
-  font-family: "YuGothic";
 }
 .c-header {
   background: var(--color-main);
@@ -93,7 +99,7 @@
   z-index: 1;
 }
 .c-banner.banner-custom .banner .parallax {
-  max-width: 64%;
+  max-width: 67%;
   left: unset;
   right: 0;
 }
@@ -405,6 +411,8 @@ main:not(.p-top) .c-mainvisual__bg::before {
     width: 100%;
   }
   .c-banner.banner-custom .contents {
+    width: 50%;
+    padding: 30px 30px;
     left: 40px;
   }
 }
@@ -485,6 +493,18 @@ main:not(.p-top) .c-mainvisual__bg::before {
     padding: 15px 20px;
     left: 20px;
   }
+  .c-banner.banner-custom .contents {
+    width: 38%;
+    min-width: unset;
+    height: 100%;
+    background: transparent;
+    left: 0;
+  }
+  .c-banner.banner-custom .banner .parallax.parallax-bg {
+    max-height: 800px;
+    max-width: 64%;
+    background-size: auto;
+  }
   .c-customer {
     display: flex;
     flex-wrap: wrap;
@@ -559,8 +579,7 @@ main:not(.p-top) .c-mainvisual__bg::before {
     margin-left: 10px;
   }
   .c-banner.banner-custom .contents {
-    padding: 15px 20px;
-    left: 10px;
+    padding: 10px 20px;
   }
   .c-merit .item {
     padding: 20px 10px 10px 50px;
@@ -609,6 +628,16 @@ main:not(.p-top) .c-mainvisual__bg::before {
     min-width: 60%;
     max-width: 70%;
     padding: 10px 15px;
+  }
+  .c-banner.banner-custom .contents {
+    width: 45%;
+    min-width: unset;
+  }
+  .c-banner.banner-custom .banner {
+    width: 60%;
+  }
+  .c-banner.banner-custom .banner .parallax.parallax-bg {
+    width: 60%;
   }
   .c-works {
     --col: 1;

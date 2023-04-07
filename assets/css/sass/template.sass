@@ -3,6 +3,7 @@
 
 :root
     --font-yu: #{$font-yu}
+    --font-yu-bold: #{$font-yu-bold}
     --font-mei: #{$font-mei}
     --font-ar: #{$font-ar}
     --font-am: #{$font-am}
@@ -2074,15 +2075,20 @@
             padding: 10px 25px
             line-height: 1.4
 
+            &:hover
+
+                .menu-child
+                    visibility: visible
+                    opacity: 1
+
         a
-            height: 100%
             display: flex
             flex-direction: column
             justify-content: center
             font-size: 1.4rem
             position: relative
             color: var(--color-default)
-            transition: 0.2s
+            transition: var(--transition-default)
 
             span
                 font-size: 1rem
@@ -2090,10 +2096,6 @@
 
             &:hover
                 opacity: 0.5
-
-                &+.menu-child
-                    visibility: visible
-                    opacity: 1
 
         &.menu-lg
 
@@ -2156,6 +2158,7 @@
         position: fixed
         left: 0
         visibility: hidden
+        // transition: var(--transition-default)
         transition: 0.2s
         opacity: 0
 
@@ -2167,6 +2170,7 @@
 
             .item
                 width: calc((100% - (var(--gap, 0px) * (var(--col, 1) - 1))) / var(--col, 1))
+                transition: unset
 
                 .c-figure
                     margin-bottom: 15px
@@ -2193,9 +2197,9 @@
                     .c-showmore
                         opacity: 0.5
 
-        &:hover
-            visibility: visible
-            opacity: 1
+        // &:hover
+        //     visibility: visible
+        //     opacity: 1
 
     &__mail
         height: 100%
@@ -2465,7 +2469,8 @@
 .c-menu
     width: 100%
     max-width: 330px
-    height: 100vh
+    height: auto
+    min-height: 100vh
     display: flex
     flex-direction: column
     justify-content: center
@@ -4091,9 +4096,10 @@
             width: 100%
             margin: 0 0 0 0
             word-break: break-word
-            font-weight: bold
+            font-weight: 300
             line-height: 1.2
             letter-spacing: 14px
+            font-family: var(--font-yu-bold)
             color: transparent
             -webkit-text-stroke: 2px white
             paint-order: stroke fill
@@ -4509,8 +4515,12 @@
         .menu-child
             width: calc(100% - 100px)
             // padding-left: 100px
-            padding-left: 0
+            padding-left: 20px
+            padding-right: 20px
             top: 100px
+
+            .c-menu-child
+                --gap: 20px
 
     .c-mainvisual
         height: calc(100vh - 100px)
@@ -4524,6 +4534,7 @@
 
             h2
                 font-size: 9.6rem
+                -webkit-text-stroke: 1px white
 
                 small
                     font-size: 5.6rem
@@ -4697,6 +4708,29 @@
                         small
                             font-size: 4.2rem
 
+@media screen and (max-width: 1366px)
+    .c-action
+
+        h3
+            margin-bottom: 27px
+            --title-strong: 2rem!important
+            --title-small: 1.4rem!important
+
+        i
+            width: 20px
+            height: 20px
+
+        .c-sclore
+
+            div
+                height: 60px
+
+            span
+                animation: aniSclore2 1.2s infinite
+
+        img
+            display: none
+
 @media screen and (max-width: 1248px)
     .c-header
 
@@ -4819,6 +4853,9 @@
 
         p
             margin-top: 5px
+
+    .c-menu
+        max-width: 100%
 
     .c-footer
         padding-top: 70px

@@ -91,7 +91,7 @@
             z-index: 1
 
             .parallax
-                max-width: 64%
+                max-width: 67%
                 left: unset
                 right: 0
 
@@ -446,6 +446,8 @@ main:not(.p-top)
             width: 100%
 
             .contents
+                width: 50%
+                padding: 30px 30px
                 left: 40px
 
 @media only screen and (min-width: 1441px)
@@ -559,6 +561,22 @@ main:not(.p-top)
                 padding: 15px 20px
                 left: 20px
 
+            .contents
+                width: 38%
+                min-width: unset
+                height: 100%
+                background: transparent
+                left: 0
+
+            .banner
+
+                .parallax
+
+                    &.parallax-bg
+                        max-height: 800px
+                        max-width: 64%
+                        background-size: auto
+
     .c-customer
         @include box()
         --col: 2
@@ -660,8 +678,9 @@ main:not(.p-top)
         &.banner-custom
 
             .contents
-                padding: 15px 20px
-                left: 10px
+                // padding: 15px 20px
+                // left: 10px
+                padding: 10px 20px
 
     .c-merit
 
@@ -733,5 +752,17 @@ main:not(.p-top)
                 min-width: 60%
                 max-width: 70%
                 padding: 10px 15px
+
+            .contents
+                width: 45%
+                min-width: unset
+
+            .banner
+                width: 60%
+
+                .parallax
+
+                    &.parallax-bg
+                        width: 60%
     .c-works
         --col: 1

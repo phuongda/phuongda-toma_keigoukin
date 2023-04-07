@@ -7,13 +7,20 @@
   src: url(../font/meiryo.ttc);
 }
 @font-face {
+  font-family: "YuGothicB";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/YuGothB.ttc);
+}
+@font-face {
+  font-family: "YuGothic";
   font-style: normal;
   font-weight: 300;
   src: url(../font/YuGothM.ttc);
-  font-family: "YuGothic";
 }
 :root {
   --font-yu: YuGothic;
+  --font-yu-bold: YuGothicB;
   --font-mei: Meiryo;
   --font-ar: A-OTF-R;
   --font-am: A-OTF-M;
@@ -2082,15 +2089,18 @@
   padding: 10px 25px;
   line-height: 1.4;
 }
+.c-header__menu li:hover .menu-child {
+  visibility: visible;
+  opacity: 1;
+}
 .c-header__menu a {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 1.4rem;
   position: relative;
   color: var(--color-default);
-  transition: 0.2s;
+  transition: var(--transition-default);
 }
 .c-header__menu a span {
   font-size: 1rem;
@@ -2098,10 +2108,6 @@
 }
 .c-header__menu a:hover {
   opacity: 0.5;
-}
-.c-header__menu a:hover + .menu-child {
-  visibility: visible;
-  opacity: 1;
 }
 .c-header__menu.menu-lg li::before {
   height: 40px;
@@ -2162,6 +2168,7 @@
 }
 .c-header .menu-child .c-menu-child .item {
   width: calc((100% - var(--gap, 0px) * (var(--col, 1) - 1)) / var(--col, 1));
+  transition: unset;
 }
 .c-header .menu-child .c-menu-child .item .c-figure {
   margin-bottom: 15px;
@@ -2183,10 +2190,6 @@
 }
 .c-header .menu-child .c-menu-child .item:hover .c-showmore {
   opacity: 0.5;
-}
-.c-header .menu-child:hover {
-  visibility: visible;
-  opacity: 1;
 }
 .c-header__mail {
   height: 100%;
@@ -2446,7 +2449,8 @@
 .c-menu {
   width: 100%;
   max-width: 330px;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4083,9 +4087,10 @@
   width: 100%;
   margin: 0 0 0 0;
   word-break: break-word;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1.2;
   letter-spacing: 14px;
+  font-family: var(--font-yu-bold);
   color: transparent;
   -webkit-text-stroke: 2px white;
   paint-order: stroke fill;
@@ -4475,8 +4480,12 @@
   }
   .c-header .menu-child {
     width: calc(100% - 100px);
-    padding-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     top: 100px;
+  }
+  .c-header .menu-child .c-menu-child {
+    --gap: 20px;
   }
   .c-mainvisual {
     height: calc(100vh - 100px);
@@ -4490,6 +4499,7 @@
   }
   .c-mainvisual__cnt h2 {
     font-size: 9.6rem;
+    -webkit-text-stroke: 1px white;
   }
   .c-mainvisual__cnt h2 small {
     font-size: 5.6rem;
@@ -4609,6 +4619,26 @@
     font-size: 4.2rem;
   }
 }
+@media screen and (max-width: 1366px) {
+  .c-action h3 {
+    margin-bottom: 27px;
+    --title-strong: 2rem!important;
+    --title-small: 1.4rem!important;
+  }
+  .c-action i {
+    width: 20px;
+    height: 20px;
+  }
+  .c-action .c-sclore div {
+    height: 60px;
+  }
+  .c-action .c-sclore span {
+    animation: aniSclore2 1.2s infinite;
+  }
+  .c-action img {
+    display: none;
+  }
+}
 @media screen and (max-width: 1248px) {
   .c-header__action {
     display: none;
@@ -4704,6 +4734,9 @@
   }
   .menu-toggle p {
     margin-top: 5px;
+  }
+  .c-menu {
+    max-width: 100%;
   }
   .c-footer {
     padding-top: 70px;
